@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f1f1f">
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="index.js" defer></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
+        rel="stylesheet"/>
+        <div class="headerMob">
+          <div class="burger-menu">
+            <div class="burger-menu-icon" onclick="toggleMenu()">
+              <img src="burger.svg">
+            </div>
+          </div>
+          <a href="/index/index.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
+          <div class="burger-menu-list">
+            <a href="/contactUs/contact.html">CONTACT US</a>
+            <a href="/memberPage/members.html">MEMBERS</a>
+            <a href="/donate/donate.html">DONATE</a>
+            <a href="/index/index.html#calendar">CALENDAR</a>
+            <a href="/news/news.html">NEWS</a>
+            <a href="/aboutUs/aboutUs.html">ABOUT US</a>
+            <a href="/awards/awards.html">AWARDS</a>
+            <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+            <a href="/championship/champ.html">CHAMPIONSHIPS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMMUNITY SERVICE</a><a href="/leadership/leadership.html">LEADERSHIP</a><a href="/recruitment/recru.html">RECRUITMENT</a>
+            
+          </div>
+          <div class="HeaderSeparator"></div>
+        </div>  
+        <div class="header">
+          <a href="/index/index.html" class="logoLink"><img
+              src="/header/SkillsLVTI.jpg"
+              class="SkillsLogo"
+              alt="SKILLS USA LOGO"
+              height={100}
+            />
+            </a>
+          <ul class="headerLinks" >
+            <li><a href="/donate/donate.html">DONATE</a></li>
+            <li><a href="/index/index.html#calendar">CALENDAR</a></li>
+            <li><a href="/news/news.html">NEWS</a></li>
+            <li>
+              <div class="dropdown">
+                <a href="/index/index.html#comm">COMMITTEES</a>
+                <div class="dropdown-content">
+                <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+                <a href="/championship/champ.html">CHAMPIONSHIPS</a>
+                <a href="/social/social.html">SOCIAL</a>
+                <a href="/community/community.html">COMMUNITY SERVICE</a>
+                <a href="/leadership/leadership.html">LEADERSHIP</a>
+                <a href="/recruitment/recru.html">RECRUITMENT</a>
+                
+                </div>
+              </div>
+            </li>
+       
+            <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
+            <li><a href="/awards/awards.html">AWARDS</a></li>
+            <li><a href="/contactUs/contact.html">CONTACT&nbsp;US</a></li>
+            <li><a href="/memberPage/members.html">MEMBERS</a></li>
+          </ul>
+          <div class="mobile-dropdown">
+              <p>ppppppp</p>
+            <ul class="mobile-dropdown-content" >
+              <li><a href="/donate/donate.html">DONATE</a></li>
+              <li><a href="/index/index.html#calendar">CALENDAR</a></li>
+              <li><a href="/news/news.html">NEWS</a></li>
+         
+              <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
+              <li><a href="/awards/awards.html">AWARDS</a></li>
+              <li>
+                <div class="dropdown">
+                  <a href="/index/index.html#comm">COMMITTEES</a>
+                  <div class="dropdown-content">
+                  <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+                  <a href="/championship/champ.html">CHAMPIONSHIPS</a>
+                  <a href="/social/social.html">SOCIAL</a>
+                  <a href="/community/community.html">COMMUNITY SERVICE</a>
+                  <a href="/leadership/leadership.html">LEADERSHIP</a>
+                  <a href="/recruitment/recru.html">RECRUITMENT</a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="/contactUs/contact.html">CONTACT US</a></li>
+              <li><a href="/memberPage/members.html">MEMBERS</a></li>
+            </ul>
+            <a href="/index/index.html" class="mobile-logoLink"><img
+                src="/header/SkillsLVTI.jpg"
+                class="SkillsLogo"
+                alt="SKILLS USA LOGO"
+                height={100}
+              />
+              </a>
+          </div>
+        </div>
+        
+        <div class="placeHolderDiv"></div>
+  
+        <ul class="appLogos">
+          <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
+          <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
+          <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
+        </ul>
+
+        <div class="blueFilter"></div>
+        <div class="slider">
+          <section aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+              <button class="carousel-button prev" data-carousel-button="prev">&#60;</button>
+              <button class="carousel-button next" data-carousel-button="next" id="pp">&#62;</button>
+              <ul data-slides>
+                <li class="slide" data-active>
+                  <img src="DSC_0147.JPG" class="picturesTop" alt="Retro MC">
+                  <div class="descHolders">
+                  <p class="picturesDesc">Lynn Tech brings home 6 medals after winning 3 competitions at Atlanta!</p>
+                  <p class="picturesDesc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </li>
+                <li class="slide">
+                  <img src="skillsSliding2.jpg" class="picturesTop" alt="Retro MC2">
+                  <div class="descHolders">
+                  <p class="picturesDesc">Lorem ipsum dolor sit amet!</p>
+                  <p class="picturesDesc2">Orci nulla pellentesque dignissim enim sit amet venenatis urna. Amet est placerat in egestas erat. Consequat semper viverra nam libero justo. Tincidunt arcu non sodales neque sodales ut etiam sit. Nulla porttitor massa id neque aliquam.</p>   
+                  </div>                   
+                </li>
+                <li class="slide">
+                  <img src="skillsSliding.jpg" class="picturesTop" alt="Retro MC3">
+                  <div class="descHolders">
+                  <p class="picturesDesc"> consectetur adipiscing elit!</p>
+                  <p class="picturesDesc2">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet. Euismod in pellentesque massa placerat duis ultricies lacus. Eget magna fermentum iaculis eu non.  </p>
+                  </div>
+                </li>
+                <li class="slide">
+                  <img src="../other_IMAGES/state conference awards/DSC_0027.JPG" class="picturesTop" alt="Retro MC3">
+                  <div class="descHolders">
+                  <p class="picturesDesc">Lynn Tech 8th & 9th grade competitions</p>
+                  <p class="picturesDesc2"> 2nd round avaiable to all competitors! <br/> STarting 3/10/2023  </p>
+                  </div>
+                </li>
+                <li class="slide">
+                  <img src="../other_IMAGES/weTransfer_1/IMG_0273.JPG" class="picturesTop" alt="Retro MC3">
+                  <div class="descHolders">
+                  <p class="picturesDesc"> Follow us on Instagram and other socials</p>
+                  <p class="picturesDesc2"> People who recruited the most earn a prize at end of follow competitions! </p>
+                  <button 
+                  id = 'lm_button'
+                 >Learn More</button>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+          </section>
+      </div>
+      
+      <div class="committeesSection" id="comm">
+        <p class="NewsHeader">Committees<div class="rbLine"></div></p>
+        <div class="comHold">   
+          
+          <div class="comObj" onclick="location.href='/leadership/leadership.html';" >
+            <img src="../other_IMAGES/state conference awards/leadership.jpg">
+            <div class="join">JOIN</div>
+            <p class="headerCom">Leadership</p>
+            <p class="descCom">Establish interpersonal relationships, individual and team
+            development through chapter operations, leadership competitions and
+            individualized growth plans.</p></div>
+          
+
+          <div class="comObj" onclick="location.href='/championship/champ.html';" >
+            <img src="../other_IMAGES/state conference awards/champ.jpg">
+            <div class="join">JOIN</div>
+            <p class="headerCom">SkillsUSA Championships Committee</p><p class="descCom">Participation in career exploration,
+              planning and work-based learning opportunities including the SkillsUSA
+              Championships.</p></div>
+
+          <div class="comObj" onclick="location.href='/fundraising/fundraising.html';"  ><img src="../other_IMAGES/state conference awards/fundraising.jpg"><div class="join">JOIN</div><p class="headerCom">Fundraising</p><p class="descCom">Develop personal financial literacy and
+            entrepreneurship skills through relevant work experience, project management
+            and chapter fundraising.</p></div>
+         
+          <div class="comObj" onclick="location.href='/community/community.html';" ><img src="../other_IMAGES/state conference awards/community.jpg"><div class="join">JOIN</div><p class="headerCom">Community-Service</p><p   class="descCom">Assess community needs, identify services and
+            employ skills to meet needs that develop long-lasting partnerships.</p></div>
+        
+            <div class="comObj" onclick="location.href='/social/social.html';"  ><img src="../other_IMAGES/state conference awards/social.jpg"><div class="join">JOIN</div><p class="headerCom">Social</p><p  class="descCom">Gather students to a fun event designed by you. 
+              Board games, video games, or simple hangouts!
+             Food is also a choice, its up to you.</p></div>
+             
+             
+             <div class="comObj" onclick="location.href='/recruitment/recru.html';"  ><img src="../other_IMAGES/state conference awards/recruit.jpg"><div class="join">JOIN</div><p class="headerCom">Recruitment</p><p  class="descCom">Engage current and former members, parents, advisory
+               committees, administrators, faculty and business and industry partners in SkillsUSA
+               chapter and classroom activities.</p></div>
+              </div>
+            </div>
+          
+        
+
+      </div>
+        
+        
+<!--
+        <div class="blej">
+
+      
+          <div class="container">
+            <img src="gus.jpeg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">The fundraising committee is focused in raising money for any events or causes SkillsUSA LVTI decides to be apart of</div>
+            </div>
+            <div class="committeeNamesHeader">
+              <p class="committeeNames">Fundraising</p>
+              </div>
+          </div>
+
+          <div class="container">
+            <img src="gus.jpeg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">The championships committee is all about creating competitions for our members to participate in. </div>
+            </div>
+            <div class="committeeNamesHeader">
+            <p class="committeeNames">Championship</p>
+            </div>
+          </div>
+          
+          <div class="container">
+            <img src="gus.jpeg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">The fundraising committee is focused in raising money for any events or causes SkillsUSA LVTI decides to be apart of</div>
+            </div>
+            <div class="committeeNamesHeader">
+              <p class="committeeNames">Community Service</p>
+              </div>
+          </div>
+          
+          <div class="container">
+            <img src="gus.jpeg" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+              <div class="text">The fundraising committee is focused in raising money for any events or causes SkillsUSA LVTI decides to be apart of</div>
+            </div>
+            <div class="committeeNamesHeader">
+              <p class="committeeNames">Social</p>
+              </div>
+          </div>
+
+           </div>
+
+
+      </div>
+    -->
+
+
+      <div class="spotlight">
+
+          <img src="../other_IMAGES/weTransfer_2/IMG_9030.JPG" class="spotlightImg"/>
+
+        <div class="spotlightWordsHolder">
+          <p class="spotlightWords1"> Our Mission!<div class="rbLineSpot"></div></p>
+     
+        
+       <!-- <div class="spotlightWordsHolder2">-->
+          <p class="spotlightWords2"> Our chapter of SkillsUSA is committed to ensuring excellence in all areas of a student’s life.
+            Whether it is promoting career and technical education, guiding individual leadership skills, or
+            providing service to the community of Lynn, we are invested in the development of the whole
+            student and person. We are committed to developing a student’s personal, workplace, and
+            technical skills grounded in academics.
+            
+           </p>
+       <!--  </div>-->
+      </div>
+      
+   </div>
+
+
+      
+      <div class="NewsSection">
+        <p class="NewsHeader">In The News<div class="rbLineNews"></div></p>
+        <div class="NewsArea" id="NewsArea">
+
+        </div>
+      </div>
+      <div class="calendarSection" id="calendar">
+        <p class="TitleCalendar">Our Calendar<div class="brLineCalendar"></div></p>
+        <iframe class="Calendar"src="https://calendar.google.com/calendar/embed?height=900&wkst=1&bgcolor=%233F51B5&ctz=America%2FNew_York&showNav=1&showDate=1&showPrint=1&showTabs=1&showTz=0&showCalendars=1&title=SkillsUSA%20Lynn%20Tech%20Calendar&src=YWFkNzM5NzZlYTgyMzRlYjNiZjhlOTk1MzI4ZmNmZjVhN2UwNDY4OWNmZTI3NzViNWFiODk1ZDkzNTgwYzY2NkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00" style="border:solid 1px #777" width="1600" height="900" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class="footer">
+      <div class="partnerSection">
+        <p class="partnerHeader">Business Partners</p>
+        <div class="partnerImgHldr">
+          <ul class="partnerImg">
+            <li><img src="/index/partnerLogo/bizLogo.png" id="mtc"></li>
+            <li><img src="/index/partnerLogo/bizLogo3.png" id="morg"></li>
+            <li><img src="/index/partnerLogo/bizLogo.png" id="mtc"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyrightSection">
+        <p>
+          © 2022 SkillsUSA LVTI, Inc.
+        </p>
+      </div>
+    </div>
+      <script>
+        // variable is obtained through document(html above) . querySelectorAll(grabs anything from html above, it has to be specified inside the "")
+        const buttons = document.querySelectorAll("[data-carousel-button]")
+        const PPP = document.getElementById("pp")
+        var pressed = false;
+
+        //foreach button, if the button is clicked 
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            // offset equals to button is equal to dataset "next", then return 1, else return -1
+            const offset = button.dataset.carouselButton === "next" ? 1: -1
+            const slides = button
+            .closest("[data-carousel]")
+            .querySelector("[data-slides]")
+            pressed = true;
+            
+        const activeSlide = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
+        
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
+        })
+
+        });
+
+        setInterval(function(){
+          if (pressed === false){
+            PPP.click();
+            pressed = true;
+          }
+        },500);
+
+        setInterval(function(){
+          pressed = false;
+        },6000)
+
+        var memberImgs = ["/newsImgs/Juan-Cubides.jpg","/newsImgs/modelOfExc.jpeg"]
+        var news0 = ['Read about Senior Juan Cubides, and his journey in...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2022/12/next-level-skills-transform-a-hobby-into-a-career-path/']
+var news1 = ['A brief article that outlines our journey to the t...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2022/08/framing-excellence/']
+        var members =[news0, news1]
+
+        var membersAmount = members.length;
+
+        for (let i = 0; i < membersAmount; i++){
+            //
+    
+            var currentMember = members[i]
+            console.log(currentMember, i)
+            //INDEX!!! INDEX!!!//
+
+        var link = document.createElement("a");
+        link.href = "https://www.youtube.com/watch?v=BIZz4A39rT4&ab_channel=JUSTPlaylist"
+        link.className = "link";
+        link.id = "link" + i
+        document.getElementById("NewsArea").appendChild(link);
+
+        var list = document.createElement('li');
+        list.id = 'list'+i;
+        list.className = 'bubbleThingHolder';
+        document.body.appendChild(list);
+        document.getElementById("link"+i).appendChild(list);
+          //
+        var div = document.createElement('div');
+        div.id = 'div'+i;
+        div.className = 'bubbleThing';
+        document.body.appendChild(div);
+        document.getElementById("list"+i).appendChild(div);
+        //
+        var img = document.createElement("img");
+        img.src = memberImgs[i];
+        img.id = 'profileImg'+i;
+        img.className = 'profileImg'
+        var block = document.getElementById("div"+i)
+        block.appendChild(img);
+          //
+        var div2 = document.createElement('div');
+        div2.id = 'bottomBubble'+i;
+        div2.className = 'bubbleThing2';
+        document.body.appendChild(div2);
+        document.getElementById("div"+i).appendChild(div2);
+
+        
+        
+        var memberName = document.createElement("p");
+        var text = document.createTextNode(currentMember[0]);
+        memberName.appendChild(text);
+        memberName.id = 'p'+ i;
+        memberName.className = 'memberName';
+        var element = document.getElementById('bottomBubble'+i);
+        element.appendChild(memberName);
+
+        var description = document.createElement("p");
+        var text = document.createTextNode(currentMember[1]);
+        description.appendChild(text);
+        description.id = 'p'+ i;
+        description.className = 'newsDescription';
+        var element = document.getElementById('bottomBubble'+i);
+        element.appendChild(description);
+
+        var article = document.createElement("a")
+        article.id = "arti" + i;
+        article.className = "linkButton"
+        article.href = currentMember[2]
+        var element = document.getElementById('bottomBubble'+i);
+        element.appendChild(article);
+
+
+        /*var btn = document.createElement("button");
+        btn.innerHTML = "Read More";
+        btn.id = "butt"+i;
+        btn.className = "newsBlockButt";
+        var element = document.getElementById('arti'+i);
+        element.appendChild(btn)*/
+
+        if(i == 1){
+          var seeMore = document.createElement("a");
+          seeMore.innerHTML = "See more news >";
+          seeMore.title = "see more news"
+          seeMore.href = "/news/news.html"
+          seeMore.className = "seeMoreLink";
+          var element = document.getElementById('bottomBubble'+i);
+          element.appendChild(seeMore);
+        }
+        }
+        function toggleMenu() {
+        var menu = document.querySelector('.burger-menu-list');
+        menu.classList.toggle('show');
+        }
+
+
+
+        //onhover function for buttons 
+        function onHover(id){
+          document.getElementById(id).style = `
+          backgroundColor: red;
+            color: white;
+                  padding: 1rem;
+                  font-size: 2rem;
+                  outline: none;
+                  border: none;
+                  z-index: 2;
+                  border-radius: .5rem;
+                  position: relative;
+                  bottom: -14rem;
+                  cursor: pointer;
+                  font-weight: bold;
+          `;
+
+
+          //onUnHover function for buttons
+          function onUnHover(id){
+          document.getElementById(id).style = `
+          background-color: white;
+                  color: black;
+                  padding: 1rem;
+                  font-size: 2rem;
+                  outline: none;
+                  border: none;
+                  z-index: 2;
+                  border-radius: .5rem;
+                  position: relative;
+                  bottom: -14rem;
+                  cursor: pointer;
+                  font-weight: bold;
+                  `
+        
+        }
+      }
+
+      </script>
+</body>
+</html>

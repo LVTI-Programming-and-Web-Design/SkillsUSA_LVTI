@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f1f1f">
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+    <link rel="stylesheet" href="news.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="App">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <script src="index.js" defer></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
+        rel="stylesheet"/>
+        <div class="headerMob">
+          <div class="burger-menu">
+            <div class="burger-menu-icon" onclick="toggleMenu()">
+              <img src="/index/burger.svg">
+            </div>
+          </div>
+          <a href="/index/index.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
+          <div class="burger-menu-list">
+            <a href="/contactUs/contact.html">CONTACT US</a>
+            <a href="/memberPage/members.html">MEMBERS</a>
+            <a href="/donate/donate.html">DONATE</a>
+            <a href="/index/index.html#calendar">CALENDAR</a>
+            <a href="/news/news.html">NEWS</a>
+            <a href="/aboutUs/aboutUs.html">ABOUT US</a>
+            <a href="/awards/awards.html">AWARDS</a>
+            <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+            <a href="/championship/champ.html">CHAMPIONSHIPS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMMUNITY SERVICE</a><a href="/leadership/leadership.html">LEADERSHIP</a><a href="/recruitment/recru.html">RECRUITMENT</a>
+            
+          </div>
+          <div class="HeaderSeparator"></div>
+        </div>  
+        <div class="header">
+          
+          <ul class="headerLinks" >
+            <li><a href="/donate/donate.html">DONATE</a></li>
+            <li><a href="/index/index.html#calendar">CALENDAR</a></li>
+            <li><a href="/news/news.html">NEWS</a></li>
+            <li>
+              <div class="dropdown">
+                <a href="/index/index.html#comm">COMMITTEES</a>
+                <div class="dropdown-content">
+                <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+                <a href="/championship/champ.html">CHAMPIONSHIPS</a>
+                <a href="/social/social.html">SOCIAL</a>
+                <a href="/community/community.html">COMMUNITY SERVICE</a>
+                <a href="/leadership/leadership.html">LEADERSHIP</a>
+                <a href="/recruitment/recru.html">RECRUITMENT</a>
+                
+                </div>
+              </div>
+            </li>
+       
+            <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
+            <li><a href="/awards/awards.html">AWARDS</a></li>
+            <li><a href="/contactUs/contact.html">CONTACT&nbsp;US</a></li>
+            <li><a href="/memberPage/members.html">MEMBERS</a></li>
+          </ul>
+            <a href="/index/index.html" class="logoLink"><img
+                src="/header/SkillsLVTI.jpg"
+                class="SkillsLogo"
+                alt="SKILLS USA LOGO"
+                height={100}
+              />
+              </a>
+        </div>
+        <ul class="appLogos">
+          <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
+          <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
+          <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
+        </ul>
+
+        <div class="NewsSection">
+            <p class="NewsHeader">In The News<div class="rbLine"></div></p>
+            <div class="NewsArea" id="NewsArea">
+    
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="partnerSection">
+              <p class="partnerHeader">Business Partners</p>
+              <div class="partnerImgHldr">
+                <ul class="partnerImg">
+                  <li><img src="/index/partnerLogo/bizLogo.png" id="mtc"></li>
+                  <li><img src="/index/partnerLogo/bizLogo3.png" id="morg"></li>
+                  <li><img src="/index/partnerLogo/bizLogo.png" id="mtc"></li>
+                </ul>
+              </div>
+            </div>
+            <div class="copyrightSection">
+              <p>
+                © 2022 SkillsUSA LVTI, Inc.
+              </p>
+            </div>
+          </div>
+    </div>
+    <script>
+                var memberImgs = ["/newsImgs/Juan-Cubides.jpg","/newsImgs/modelOfExc.jpeg","/newsImgs/diversityWorkshop.jpg","/newsImgs/ma.jpg","/newsImgs/jasonm.jpg","/newsImgs/gh.jpg"
+            ,"/newsImgs/nelson.jpg",
+            'https://www.itemlive.com/wp-content/uploads/2022/12/RS216040_IMG_3436-web-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2022/03/RS206745_3_26_22_SRH_Lynn_SkillsUSA_bookcase_building_2-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2022/03/RS206223_3_9_22_SRH_Lynn_SkillsUSA_team_thanks_teachers-web-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2021/02/Seniors-1-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2019/10/SkillsUSAPlayground-falcigno-04-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2019/08/Lynn-Tech-SkillsUSA-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2019/07/WEB-SkillsUsa-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2018/11/RS165238_11_16_18_Lynn_Tech_Skills_USA_book_drive-e1542845450305-500x434.jpg?theia_smart_thumbnails_file_version=2?theia_smart_thumbnails_file_version=2?theia_smart_thumbnails_file_version=2', 'https://www.itemlive.com/wp-content/uploads/2023/02/RS217830_2_4_23_Lynn_Skills_USA_financial_literacy_7-web-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2022/05/RS208140_5_5_22_SRH_Lynn_Tech_SkillsUSA_signing_day_11-web-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2022/04/04_11_22_JBM_Lynn_USC_Juan_Cubides_1-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2022/03/LOOK_SkillsUSA-Lynn-Tech-SAiL-conference-500x434.jpg',  
+            'https://www.itemlive.com/wp-content/uploads/2021/12/Lynn-Tech-Students-and-org-leaders-500x434.jpeg', 
+             'https://www.itemlive.com/wp-content/uploads/2021/05/Lynn-Tech-students-and-SkillsUSA-members-Nyssa-Lewis-left-and-Brian-Lopez-were-invited-to-Good-Morning-America-on-Tuesday-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2018/11/RS165238_11_16_18_Lynn_Tech_Skills_USA_book_drive-e1542845450305-500x434.jpg?theia_smart_thumbnails_file_version=2?theia_smart_thumbnails_file_version=2?theia_smart_thumbnails_file_version=2'
+            ,'', 'https://www.itemlive.com/wp-content/uploads/2019/12/walk2-EDIT-500x434.jpg?theia_smart_thumbnails_file_version=2', '', 'https://www.itemlive.com/wp-content/uploads/2017/09/Lynn091017-Owen-Gomes-award1-500x434.jpg?theia_smart_thumbnails_file_version=2', 'https://www.itemlive.com/wp-content/uploads/2017/07/WEBLynn062617-Owen-SkillsUSA-awards4-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2017/07/WEB-Lynn033017-Owen-Skill-USA2-500x434.jpg', 'https://www.itemlive.com/wp-content/uploads/2017/07/WEB-shutterstock_232674022-500x434.jpg', '', '', '', 'https://www.itemlive.com/wp-content/uploads/2017/07/12_18-Lynn-Tech-Winter-Rally_4Web-500x434-1.jpg', '','', '', '', '', '', '', ''
+        ]
+  
+        var news0 = ['Read about Senior Juan Cubides, and his journey in...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2022/12/next-level-skills-transform-a-hobby-into-a-career-path/']
+var news1 = ['A brief article that outlines our journey to the t...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2022/08/framing-excellence/']
+var news2 = ['This is a feature on our building inclusivity work...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2021/10/student-created-diversity-workshop-wins-award-and-hearts/']
+var news3 = ['Check out this feature story about two of our stud...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2021/07/hammering-home-the-value-of-skillsusa/']
+var news4 = ['This is a feature story about our chapter advisor...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://skillsusachampions.org/2019/09/a-good-read-on-how-to-improve-lives/']
+var news5 = ['This article outlines our journey to the top as w...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'https://read.nxtbook.com/mercury/skillsusa/champions_spring_2019/they_model_excellence_in_thei.html']
+var news6 = ['This is a feature story about former SkillsUSA pre...', 'With hard work and dedication the team at SkillsUSA LVTI has managed to raise a million to give back to kids all over the world!', 'http://read.nxtbook.com/mercury/skillsusa/champions_spring_2017/index.html#a_call_to_serve']
+var news7 = ['SkillsUSA students give back to Lynn community thr...', '', 'https://www.itemlive.com/2022/12/20/skillsusa-students-give-back-to-lynn-community-through-books/']
+var news8 = ['Lynn Tech’s SkillsUSA strives for social and emoti...', '', 'https://www.itemlive.com/2022/03/27/lynn-techs-skillsusa-strives-for-social-and-emotional-support/']
+var news9 = ['SkillsUSA gives thanks to Lynn teachers', '', 'https://www.itemlive.com/2022/03/09/skillsusa-gives-thanks-to-lynn-teachers/']
+var news10 = ['Lynn Tech SkillsUSA team starts a dialogue', '', 'https://www.itemlive.com/2021/02/22/lynn-tech-skillsusa-team-starts-a-dialogue/']
+var news11 = ['Lynn Tech’s SkillsUSA team is raising funds for a...', '', 'https://www.itemlive.com/2019/10/20/lynn-techs-skillsusa-team-is-raising-funds-for-an-inclusive-playground-at-harrington-elementary-school/']
+var news12 = ['Lynn Tech SkillsUSA team honored by city for commu...', '', 'https://www.itemlive.com/2019/08/14/lynn-tech-skillsusa-team-honored-by-city-for-community-service-awards/']
+var news13 = ['Lynn Tech SkillsUSA team wins three gold awards a...', '', 'https://www.itemlive.com/2019/07/05/lynn-tech-skillsusa-team-wins-three-gold-awards-at-national-conference/']
+var news14 = ['SkillsUSA students work with local organizations t...', '', 'https://www.itemlive.com/2018/11/21/skillsusa-students-work-with-local-organizations-to-raise-money-to-purchase-and-distribute-15000-books-to-local-kids/']
+var news15 = ['Lynn Tech cashes in on financial literacy for stud...', '', 'https://www.itemlive.com/2023/02/06/lynn-tech-cashes-in-on-financial-literacy-for-students/']
+var news16 = ['Lynn Tech grads take part in trade-signing day', '', 'https://www.itemlive.com/2022/05/05/lynn-tech-grads-take-part-in-trade-signing-day/']
+var news17 = ['Lynn Tech student gets full ride to USC', '', 'https://www.itemlive.com/2022/04/11/lynn-tech-student-gets-full-ride-to-usc/']
+var news18 = ['Lynn Tech students attend leadership conference', '', 'https://www.itemlive.com/2022/03/02/lynn-tech-students-attend-leadership-conference/']
+var news19 = ['Lynn Tech students raise $11,000 for nonprofits', '', 'https://www.itemlive.com/2021/12/23/lynn-tech-students-raise-11000-for-nonprofits/']
+var news20 = ['Lynn Tech seniors invited to appear on ‘Good Morni...', '', 'https://www.itemlive.com/2021/05/03/lynn-tech-seniors-invited-to-appear-on-good-morning-america/']
+var news21 = ['Lynn Tech students host a ‘Conversations on Race’ ...', '', 'https://www.itemlive.com/2021/04/20/lynn-tech-students-host-a-conversations-on-race-workshop/']
+var news22 = ['A look back at Lynn Tech over the last four years', '', 'https://www.itemlive.com/2020/06/08/a-look-back-at-lynn-tech-over-the-last-four-years/']
+var news23 = ['Tech students build more than a playground', '', 'https://www.itemlive.com/2019/12/20/tech-students-build-more-than-a-playground/']
+var news24 = ['Lynn Tech students distribute 20,000 books to elem...', '', 'https://www.itemlive.com/2018/12/16/lynn-tech-students-distribute-20000-books-to-elementary-school-students/']
+var news25 = ['Lynn Tech teacher Jason McCuish receives Peter J. ...', '', 'https://www.itemlive.com/2017/09/10/lynn-tech-teacher-jason-mccuish-recieves-peter-j-gomes-service-award/']
+var news26 = ['Lynn Tech service is pure gold', '', 'https://www.itemlive.com/2017/06/27/lynn-tech-service-is-pure-gold/']
+var news27 = ['Lynn Tech students show off their Skills', '', 'https://www.itemlive.com/2017/03/31/lynn-tech-students-show-off-their-skills/']
+var news28 = ['Sky’s the limit at Lynn Tech', '', 'https://www.itemlive.com/2017/02/16/skys-the-limit-at-lynn-tech/']
+var news29 = ['Tech puts $4,680 on the Table', '', 'https://www.itemlive.com/2015/12/21/tech-puts-4680-on-the-table/']
+var news30 = ['People, Places and Things: 6-13-15', '', 'https://www.itemlive.com/2015/06/13/people-places-and-things-6-13-15/']
+var news31 = ['Tech students reach national competition', '', 'https://www.itemlive.com/2015/05/09/tech-students-reach-national-competition/']
+var news32 = ['Tech students get in giving spirit', '', 'https://www.itemlive.com/2014/12/24/tech-students-get-in-giving-spirit/']
+var news33 = ['Lynn Tech students awarded for community service', '', 'https://www.itemlive.com/2014/05/08/lynn-tech-students-awarded-for-community-service/']
+var news34 = ['Students honored for park project', '', 'https://www.itemlive.com/2014/04/29/students-honored-for-park-project/']
+var news35 = ['Tech student scores high in skills competition', '', 'https://www.itemlive.com/2013/05/08/tech-student-scores-high-in-skills-competition/']
+
+        
+        var members =[news0, news1, news2, news3, news4, news5, news6, news7, news8, news9, news10, news11, news12, news13, news14, news15, news16, news17, news18, news19, news20, news21, news22, 
+        news23, news24, news25, news26, news27,
+        news28, news29,news30,news31, news32, news33, news34, news35]
+
+        var membersAmount = members.length;
+
+        for (let i = 0; i < membersAmount; i++){
+          //
+          var noImg=false
+          var currentMember = members[i]
+          console.log(currentMember, i)
+          //INDEX!!! INDEX!!!//
+          var list = document.createElement('li');
+          list.id = 'list'+i;
+          list.className = 'bubbleThingHolder';
+          document.body.appendChild(list);
+          document.getElementById("NewsArea").appendChild(list);
+          
+          var link = document.createElement("a");
+          link.href = members[i][2]
+          link.className = "link";
+        link.id = "link" + i
+        document.getElementById("list"+i).appendChild(link);
+        
+        //
+        if (memberImgs[i]==''){
+          noImg=true
+          var div = document.createElement('div');
+          div.id = 'div'+i;
+          div.className = 'bubbleThingNoImg';
+          document.body.appendChild(div);
+          document.getElementById("link"+i).appendChild(div);
+        }
+        else{
+          var div = document.createElement('div');
+          div.id = 'div'+i;
+          div.className = 'bubbleThing';
+          document.body.appendChild(div);
+          document.getElementById("link"+i).appendChild(div);
+          //
+          var img = document.createElement("img");
+          img.src = memberImgs[i];
+          img.id = 'profileImg'+i;
+          img.className = 'profileImg'
+          var block = document.getElementById("div"+i)
+          block.appendChild(img);
+            //
+        }
+        var div2 = document.createElement('div');
+        div2.id = 'bottomBubble'+i;
+        div2.className = 'bubbleThing2';
+        document.body.appendChild(div2);
+        document.getElementById("div"+i).appendChild(div2);
+
+        
+        
+        var memberName = document.createElement("p");
+        var text = document.createTextNode(currentMember[0]);
+        memberName.appendChild(text);
+        memberName.id = 'p'+ i;
+        memberName.className = 'memberName';
+        var element = document.getElementById('bottomBubble'+i);
+        element.appendChild(memberName);
+
+
+        var article = document.createElement("a")
+        article.id = "arti" + i;
+        article.className = "linkButton"
+        article.href = currentMember[2]
+        var element = document.getElementById('bottomBubble'+i);
+        element.appendChild(article);
+        }
+        function toggleMenu() {
+        var menu = document.querySelector('.burger-menu-list');
+        menu.classList.toggle('show');
+        };
+
+
+
+
+        //const url = new URL("https://www.itemlive.com/?s=Lynn+Voc+tech+Skills+USA");
+         //alert(url.protocol); 
+    </script>
+</body>
+</html>

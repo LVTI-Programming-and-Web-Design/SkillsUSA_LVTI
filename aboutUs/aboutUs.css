@@ -1,0 +1,464 @@
+html {
+    font-family: sans-serif;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+  }
+  body {
+    margin: 0;
+    background-color: rgb(235, 235, 235);
+    overflow-x: hidden;
+  }
+  
+  .header {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 10px black;
+    display: flex;
+    flex-direction: row;
+    z-index: 13;
+  }
+  .headerMob{
+    display: none;
+  }
+  .headerLinks {
+    position: absolute;
+    right: 5%;
+  }
+  .headerLinks li {
+    font-size: 18px;
+    list-style: none;
+    display: inline;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1300px){
+
+    .headerLinks{
+    left: 7%;
+    padding-left: 0;
+    width: 100%;
+    }
+    .headerLinks li{
+      padding-left: .25rem;
+      padding-right: .25rem;
+      font-size: 17px;
+    }
+    .logoLink{
+      
+      position: relative;
+      top: -1.4%;
+      left: -37%;
+      
+    }
+  }
+  
+  /*DROPDOWN MENU COMMITTEES*/
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    left: -24px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF !important;
+    background-color: #00A4BD !important;
+  }
+  /*DROPDOWN MENU COMMITTEES*/
+  
+  
+  .headerLinks a:hover {
+    color: rgb(0, 90, 226);
+  }
+  .headerLinks a{
+    text-decoration-line: none;
+  }
+  .headerLinks a{
+    color: black;
+  }
+  
+  .logoLink{
+    
+    position: relative;
+    top: -1.4%;
+    left: -37%;
+  }
+  .SkillsLogo {
+    width: 143px;
+    position: relative;
+    top: -1.3%;
+    left: -37%;
+  }
+  .appLogos{
+    position: absolute;
+    z-index: 3;
+    right: 90px;
+    top: 95px;
+    list-style:none;
+  }
+  .appLogos li{
+    display: inline;
+  }
+  .appLogos #yt{
+    height:36px;
+    width:41.5px;
+    margin-bottom: 2px;
+  }
+  .appLogos #facebook{
+    height:40px;
+    width:43px;
+  }
+  .appLogos #insta{
+    height: 40px;
+    width: 43px;
+  }
+
+  .headerImage{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 330px;
+    position: relative;
+    z-index: -1;
+  }
+  .headerTextHolder{
+    position: absolute;
+    top: 330px;
+    height: 120px;
+    width: 100%;
+    background-color: rgb(45, 45, 167);
+    z-index: 2;
+  }
+  .headerText{
+    margin: 0;
+    top: 38px;
+    position: relative;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+  }
+  .secondSection{
+    padding-top: 90px;
+    padding-bottom: 40px;
+    box-shadow: 0px -2px 5px black;
+    position: relative;
+    z-index: 0;
+    background-color: #FFFFFF;
+  }
+  .contentHolder{
+    display: flex;
+    top: 550px;
+    height: 100%;
+    width: 80%;
+    margin-left: 23%;
+  }
+
+  .textBarr{
+    position: inherit;
+    width: 70%;
+  }
+  .infoText{
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+  }
+  .forParentsHeader{
+    padding-top: 40px;
+    font-size: 30px;
+  }
+
+  hr{
+    width: 80vw;
+    padding-top: .5px;
+  }
+
+  /*FOOTER vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv**/
+
+  .partnerHeader{
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+    margin: 0;
+  }
+  .partnerSection{
+    padding-top: 43px;
+    background-color: rgb(235, 235, 235);
+    width: 100vw;
+    /*position: relative;
+    top: 30px;*/
+  }
+  .partnerImgHldr{
+    
+    width: 70%;
+    margin-left: 15%;
+    position: relative;
+    top: -20px;
+  }
+  .partnerImg li{
+    display: inline-block;
+  }
+  .partnerImg{
+    margin: 0px;
+  }
+  .partnerImg img{
+  }
+  .partnerImg #morg{
+    margin-bottom: 5%;
+    height: 50%;
+    width: 50%;
+  }
+  .partnerImg #mtc{
+    margin-top: 0%;
+    height: 60%;
+    width: 60%;
+  }
+  .copyrightSection{
+    position: relative;
+    /*top: -67px;*/
+    height: 75px;
+    width: 100vw;
+    background-color: rgb(31, 31, 31);
+
+  }
+
+  .copyrightSection p{
+    position: relative;
+    top: 22.5px;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+  }
+  .footer{
+    position: relative;
+    z-index: -2;
+  }
+  .headerMob{
+    display: none;
+  }
+  @media only screen and (max-width: 1000px){
+    html{
+      letter-spacing: -1.8px;
+    }
+    a { text-decoration: none;
+      color:#000000;
+      letter-spacing: -1px;
+       }
+      /*header menu*/
+      .headerMob{
+        background-color: #fff;
+        display: block;
+        z-index: 5;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+      .header{
+        display: none;
+      }
+      /*beginning of burger menu*/
+        .burger-menu-list {
+          list-style: none;
+          display: none;
+          text-align: left;
+          position: relative;
+          padding: none;
+        }
+        .burger-menu-list.show {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          left:0;
+          z-index: 4;
+          width: 100%;
+        }
+        .burger-menu-icon{
+          height: 50px;
+          width: 70px;
+          padding-left: 20px ;
+          margin: 0;
+          position: absolute;
+          right: 0;
+          padding-top: 10px;
+          font-size: 0;
+        }
+        .burger-menu-list li {
+          background-color: rgb(255, 255, 255);
+          padding-left: 10px;
+          padding-top:  10px;
+          padding-bottom: 10px;
+          font-weight: 500;
+          position: relative;
+          font-size: 16px;
+        }
+        .burger-menu-list a{
+          /*display: block;**/
+          background-color: #fff;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          margin-top: -4px;
+        }
+        .burger-menu-list {
+          box-shadow: 0 5px 6px -6px rgb(0, 0, 0);
+          position: relative;
+        }
+  
+      .burger-menu-list li:hover{
+          background-color: #83b0b8;
+      }
+      /*end of burger menu*/
+      /*logo*/
+      .skillsLogo{
+        height: 70px;
+        
+      }
+      /*end of header*/
+      .appLogos{
+        display: none;
+      }
+      .HeaderSeparator{
+        height: 20px;
+        width: 100vw;
+        background-color: #f57076;
+        position: relative;
+        z-index: 3;
+      }
+      /*end of burger menu*/
+      /*logo*/
+      .skillsLogo{
+        height: 70px;
+      }
+      /*end of header*/
+  
+  
+      .blueFilter{
+        z-index: -1;
+        top: 74px;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(10, 44, 107); 
+      }
+      .slide{
+        box-shadow: 0 0 0 0;
+        letter-spacing: -.8px;
+      }
+      .picturesDesc{
+        top: 5%;
+        font-size: 6vw;
+      }
+      .picturesDesc2{
+        font-size: 4.3vw;
+        left: 15%;
+        top: 5%;
+        width: 70vw;
+      }
+      .comHold{
+        flex-direction: column;
+      }
+      .committeesSection{
+        display: none;
+      }
+      .spotlight{
+        height: 30rem;
+      }
+      .spotlightImgHolder{
+        display: none;
+      }
+      .spotlightWordsHolder{
+        top: 40px;
+        text-align: center;
+        width: 80vw;
+        margin-left: 10vw;
+      }
+      .spotlightWords1{
+        padding-left: 0;
+        margin-top: 0;
+        text-align: center;
+        
+      }
+      .spotlightWordsHolder2{
+        top: 40px;
+        text-align: center;
+        height: 50vh;
+        width: 80vw;
+        margin-left: 10vw;
+      }
+      .spotlightWords2{
+        text-align: center;
+        padding-left: 0;
+        letter-spacing: -3px;
+      }
+      .bubbleThingHolder{
+        margin-left: 0px;
+      margin-right: 0px;
+      }
+      .bubbleThing{
+        width: 80vw;
+        height: 450px;
+        background-color: #fff;
+        margin-bottom: 30px;
+      }
+      .bubbleThing2{
+        height: 210px;
+        letter-spacing: -1px;
+      }
+      .memberName{
+        font-weight: 700;
+      }
+      .seeMoreLink{
+        letter-spacing: 0px;
+      }
+      .newsDescription{
+        font-size: 4.3vw;
+      }
+    
+      .Calendar{
+        width: 90vw;
+        height: 25rem;
+      }
+  
+      .calendarSection{
+        height: 65vh;
+        height: 35rem
+      }
+      #div0{
+        display: none;
+      }
+      .appLogos{
+        display: none;
+      }
+      .rbLineSpot{
+        margin: auto;
+      }
+      .contentHolder{
+        margin-left: 15%;
+      }
+      .textBarr{
+        width: 94%;
+      }
+  }

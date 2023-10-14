@@ -1,0 +1,1356 @@
+html {
+  font-family: sans-serif;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+body {
+  margin: 0;
+  background-color: rgb(235, 235, 235);
+  overflow-x: hidden;
+ 
+}
+.headerMob{
+  display: none;
+}
+.header {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px black;
+  display: flex;
+  flex-direction: row;
+  z-index: 13;
+}
+.headerLinks {
+  position: absolute;
+  right: 5%;
+}
+.headerLinks li {
+  font-size: 18px;
+  list-style: none;
+  display: inline;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.mobile-dropdown{
+  display: none;
+}
+/*DROPDOWN MENU COMMITTEES*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -24px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  z-index: 30;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 30;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF !important;
+  background-color: #00A4BD !important;
+}
+/*DROPDOWN MENU COMMITTEES*/
+
+
+.headerLinks a:hover {
+  color: rgb(0, 90, 226);
+}
+.headerLinks a{
+  text-decoration-line: none;
+}
+.headerLinks a{
+  color: black;
+}
+
+.logoLink{
+  
+  position: relative;
+  top: -1.4%;
+  left: -33.8%;
+  
+}
+.SkillsLogo {
+  width: 143px;
+  position: relative;
+  top: -1.3%;
+  left: -37%;
+}
+
+
+@media only screen and (max-width: 1300px){
+
+.headerLinks{
+left: 7%;
+padding-left: 0;
+width: 100%;
+}
+.headerLinks li{
+  padding-left: .25rem;
+  padding-right: .25rem;
+  font-size: 17px;
+}
+.logoLink{
+  
+  position: relative;
+  top: -1.4%;
+  left: -37%;
+  
+}
+
+}
+.appLogos{
+  position: absolute;
+  z-index: 3;
+  right: 90px;
+  top: 95px;
+  list-style:none;
+}
+
+.appLogos li{
+  display: inline;
+}
+.appLogos #yt{
+  height:36px;
+  width:41.5px;
+  margin-bottom: 2px;
+}
+.appLogos #facebook{
+  height:40px;
+  width:43px;
+}
+.appLogos #insta{
+  height: 40px;
+  width: 43px;
+}
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  .carousel {
+
+    width: 100%;
+    height: 50rem;
+    position: relative;
+  }
+  
+  .carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .picturesTop{
+    opacity: 1;
+    filter: brightness(65%)
+
+  }
+  
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 100ms;
+    box-shadow: 0px 2px 10px black;
+  }
+  
+  .slide > img {
+    display: block;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+
+  .descHolders{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100vw;
+    
+  }
+  .picturesDesc{
+    font-family: 'Hind Siliguri', sans-serif;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 20%;
+    width: 100vw;
+    font-size: 40px;
+    font-weight: 900;
+    z-index: 4;
+    text-shadow: 5px 0px 10px black;
+  }
+
+  .picturesDesc::after{
+    opacity: 1;
+  }
+  .picturesDesc2{
+    font-family: 'Hind Siliguri', sans-serif;
+    color: white;
+    position: relative;
+    text-align: center;
+    left: 25%;
+    top: 19%;
+    width: 50vw;
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 4;
+    text-shadow: 5px 6px 10px black;
+  }
+  .blueFilter{
+    z-index: -1;
+    top: 100px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 44, 107, 0); 
+  }
+  
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+  .carousel-button:focus {
+    outline: 1px solid black;
+  }
+  
+  .carousel-button.prev {
+    left: 1rem;
+  }
+  
+  .carousel-button.next {
+    right: 1rem;
+  }
+  .spotlight{
+    
+    
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .spotlightImgHolder{
+    height: inherit;
+    width: fit-content;
+    
+ 
+  }
+  .spotlightImg{
+    
+
+    object-fit: cover;
+    height: inherit;
+    width: 50vw;
+    border: 5px rgb(255, 255, 255) solid;
+    
+  }
+  .spotlightWordsHolder{
+
+
+  }
+  .spotlightWords1{
+    padding-left: 1.5rem;
+    font-weight: 900;
+    font-size:30px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+ 
+  }
+
+  .spotlightWordsHolder2{
+    margin-left: 50%;
+    height: 1vh;
+    padding-right: 1rem;
+   background-color: transparent;
+   
+
+
+  }
+  .spotlightWords2{
+    text-align: left;
+    padding-left: 2rem;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+    color: rgb(59, 59, 59);
+    margin-top: 2.5rem;
+    display: flex;
+    background-color: transparent
+  
+  }
+
+  /* NEWS SECTION */
+
+  .NewsSection{
+    width: 100%;
+    padding-bottom: 0px;
+    background-color: rgb(235, 235, 235);
+  }
+  .NewsArea{
+
+  }
+  .NewsHeader{
+    font-size: 35px;
+    font-weight: 700;
+
+  }
+
+  .rbLine{
+    position: relative;
+    top: -36px;
+    margin: auto;
+    width: 220px;
+    height: 3px;
+    background: linear-gradient(to left, #f57076, #94cbf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 3px;
+    background-repeat: repeat-x;
+  }
+  .rbLineSpot{
+
+    width: 12.5rem;
+    height: 3px;
+    background: linear-gradient(to left, #f57076, #94cbf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 3px;
+    background-repeat: repeat-x;
+    position:relative;
+    right: -1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .rbLineNews{
+
+    position: relative;
+    top: -36px;
+    height: 3px;
+    width: 215px;
+    margin: auto;
+    background: linear-gradient(to left, #f57076, #94cbf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 3px;
+    background-repeat: repeat-x;
+  }
+  .brLineCalendar{
+    position: relative;
+    top: -36px;
+    margin: auto;
+    width: 250px;
+    height: 3px;
+    background: linear-gradient(to left, #f57076, #94cbf9 100%);
+    background-position: 0 100%;
+    background-size: 100% 3px;
+    background-repeat: repeat-x;
+  }
+
+  .bubbleThingHolder{
+    list-style: none;
+    display: inline;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.MemberList{
+  margin: 0;
+}
+.bubbleThing{
+
+  display: inline-block;
+  height: 470px;
+  width: 550px;
+  background-color: black;
+  margin-top: 2rem;
+  border-radius: 0px;
+  margin-bottom: 150px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s ease-in-out;
+  background-color: white;
+}
+
+.bubbleThing:hover{
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.profileImg{
+  height: 40%;
+  width: inherit;
+  display: block;
+  object-fit: cover;
+  
+}
+.bubbleThing2{
+
+  top: 0;
+  background-color: white;
+  position: relative;
+  height: 45%;
+  
+}
+.memberName{
+  position: relative;
+  font-size: 20px;
+  top: 22px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 700;
+}
+
+.newsDescription{
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  font-size: 20px;
+  top: 20px;
+  color: rgb(77, 77, 77);
+  text-align: center;
+  font-weight: 200;
+}
+
+.newsBlockButt{
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(228, 228, 228);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.newsBlockButt:hover{
+  background-color: rgb(223, 63, 63);
+}
+.seeMoreLink{
+  position: absolute;
+  bottom: -80px;
+  right: 10px;
+  color: rgb(39, 39, 39);
+  text-decoration-line: none;
+}
+
+.seeMoreLink:hover{
+  cursor: pointer;
+  color: rgb(201, 31, 31);
+}
+  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*
+  /* NEWS SECTION */
+/* committees EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+.blej{
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  position: relative;
+  width: 20%;
+  height: 30%;
+  margin-left: 2%;
+  margin-right: 3%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.container:hover .committeeNames{
+  color:rgb(0, 90, 226);
+}
+
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 1.5vw;
+  font-weight: 800;
+}
+.committeeNames{
+  font-size: 1.4vw;
+  font-weight: 800;
+  margin: 0;
+  margin-bottom:60px;
+  width: inherit;
+  height: 80px;
+  background-color: #ffffff;
+  padding-top:20px;
+}
+
+/* committees EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+  .calendarSection{
+    
+    box-shadow: 0 1px 3px -2px rgb(0, 0, 0);
+    width: 100vw;
+    height: 115vh;
+    background-color: white;
+
+  }
+  .TitleCalendar{
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .Calendar{
+    margin-top: -3px;
+    height: 90vh;
+    width: 60vw;
+  }
+  @media only screen and (max-width: 1200px){
+    .Calendar{
+
+      height: 80%;
+      width: 80%;
+    }
+    .calendarSection{
+    
+      box-shadow: 0 1px 3px -2px rgb(0, 0, 0);
+      width: 100vw;
+      height: 85vh;
+      background-color: white;
+  
+    }
+    
+  }
+  .partnerHeader{
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+    margin: 0;
+  }
+  .partnerSection{
+    padding-top: 43px;
+    background-color: rgb(235, 235, 235);
+    width: 100vw;
+    /*position: relative;
+    top: 30px;*/
+  }
+  .partnerImgHldr{
+    
+    width: 70%;
+    margin-left: 15%;
+    position: relative;
+    top: -20px;
+  }
+  .partnerImg li{
+    display: inline-block;
+  }
+  .partnerImg{
+    margin: 0px;
+  }
+  .partnerImg img{
+  }
+  .partnerImg #morg{
+    margin-bottom: 5%;
+    height: 50%;
+    width: 50%;
+  }
+  .partnerImg #mtc{
+    margin-top: 0%;
+    height: 60%;
+    width: 60%;
+  }
+  .copyrightSection{
+    position: relative;
+    /*top: -67px;*/
+    height: 75px;
+    width: 100vw;
+    background-color: rgb(31, 31, 31);
+
+  }
+
+  .copyrightSection p{
+    position: relative;
+    top: 22.5px;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+  }
+  .footer{
+    position: relative;
+    z-index: -2;
+  }
+
+
+
+
+
+
+
+
+.comittees{
+  background-color: transparent;
+  padding-inline: 10rem;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  margin-block: 5rem;
+}
+
+.comittees .comittee{
+  margin-inline: 2rem;
+}
+
+#championshipCom{
+height: 25rem;
+width: 25rem;
+background-color: white; 
+text-align: center;
+align-items: center;
+justify-content: center; 
+cursor: pointer;
+} 
+
+#championshipCom .backgroundImg{
+  background-image: url("./championshipCom_v2.png");
+  background-size: cover;
+  background-position: center;
+  height: 10rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  background-blend-mode: overlay;
+  transition-duration: .5s;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+
+}
+
+#championshipCom .backgroundImg:hover{
+  background-color: rgba(0,0,0,0.7);
+
+}
+
+ #chmpshpComBackImg:hover > #join1{
+  opacity: 1;
+}
+#championshipCom .backgroundImg h1{
+  color: white; 
+  position: relative;
+  bottom: -50%;
+  opacity: 0; 
+
+  transition-duration: .5s;
+}
+
+
+
+#championshipCom .description{
+  font-size: 1vw;
+  font-weight: 900;
+  color: black;
+}
+
+
+
+
+
+#fundraisingCom{
+  height: 25rem;
+  width: 25rem;
+  background-color: white; 
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+  cursor: pointer;
+  } 
+  
+  #fundraisingCom .backgroundImg{
+    background-image: url("./championshipCom_v2.png");
+    background-size: cover;
+    background-position: center;
+    height: 10rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    background-blend-mode: overlay;
+    transition-duration: .5s;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+  
+  }
+  
+  #fundraisingCom .backgroundImg:hover{
+    background-color: rgba(0,0,0,0.7);
+  
+  }
+  
+   #fundsComBackImg:hover > #join2{
+    opacity: 1;
+  }
+  #fundraisingCom .backgroundImg h1{
+    color: white; 
+    position: relative;
+    bottom: -50%;
+    opacity: 0; 
+  
+    transition-duration: .5s;
+  }
+  
+  
+  
+  #fundraisingCom .description{
+    font-size: 1vw;
+    font-weight: 900;
+    color: black;
+  }
+
+  
+
+
+
+
+  #communityCom{
+    height: 25rem;
+    width: 25rem;
+    background-color: white; 
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+  
+    } 
+    
+    #communityCom .backgroundImg{
+      background-image: url("./championshipCom_v2.png");
+      background-size: cover;
+      background-position: center;
+      height: 10rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center; 
+      background-blend-mode: overlay;
+      transition-duration: .5s;
+      margin-top: -1.5rem;
+      margin-bottom: 2rem;
+    
+    }
+    
+    #communityCom .backgroundImg:hover{
+      background-color: rgba(0,0,0,0.7);
+    
+    }
+    
+     #communityComBackImg:hover > #join3{
+      opacity: 1;
+    }
+    #communityCom .backgroundImg h1{
+      color: white; 
+      position: relative;
+      bottom: -50%;
+      opacity: 0; 
+    
+      transition-duration: .5s;
+    }
+    
+    
+    
+    #communityCom .description{
+      font-size: 1vw;
+      font-weight: 900;
+      color: black;
+      padding-inline: 1.5rem;
+    }
+
+
+    /*NEW SEC*/
+    .committeesSection{
+      margin-bottom: 120px;
+      width: 100%;
+ 
+    }
+    .comHold{
+      position: relative;
+      top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+      flex-wrap: wrap;
+      padding-inline: 1rem;
+    }
+    .comObj{
+      height: 500px;
+      width: 400px;
+      background-color: #fff;
+      cursor: pointer;
+       
+    }
+
+    .comObj .descCom{
+       font-size: clamp(1rem, 2.2vw ,1rem)
+    }
+    .comObj:hover > img{
+      filter: brightness(50%)
+    }
+    .join{
+      opacity: 0;
+      transition-duration: .5;
+      position: relative;
+      text-align: center;
+      width: inherit;
+      top: -140px;
+      font-size: 45px;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+    }
+    .comObj:hover > .join{
+      opacity: 1;
+    }
+    .comObj img{
+      filter: brightness(100%);
+      position: relative;
+      top: 0;
+      width: inherit;
+      display: block;
+      object-fit: cover;
+      height: 45%;
+      transition-duration: .5s;
+    }
+    .headerCom{
+      position: relative;
+      margin: 0;
+      top: -30px;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    .descCom{
+
+      position: relative;
+      font-weight: 500;
+      font-size: 24px;
+      margin-left: 10px;
+      margin-right: 10px;
+      top: -30px;
+    }
+/*NEW SEC*/
+
+    #socialCom{
+      height: 23rem;
+      width: 25rem;
+      background-color: transparent; 
+      text-align: center;
+      align-items: center;
+      justify-content: center; 
+      cursor: pointer;
+      box-shadow: 0rem 0rem 1rem black;
+      } 
+      
+      #socialCom .backgroundImg{
+        background-image: url("./championshipCom_v2.png");
+        background-size: cover;
+        background-position: center;
+        height: 10rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+        background-blend-mode: overlay;
+        transition-duration: .5s;
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+      
+      }
+      
+      #socialCom .backgroundImg:hover{
+        background-color: rgba(0,0,0,0.7);
+      
+      }
+      
+       #socialComBackImg:hover > #join4{
+        opacity: 1;
+      }
+      #socialCom .backgroundImg h1{
+        color: white; 
+        position: relative;
+        bottom: -50%;
+        opacity: 0; 
+      
+        transition-duration: .5s;
+      }
+      
+      
+      
+      #socialCom .description{
+        font-size: 1vw;
+        font-weight: 1000;
+        margin-top: -.5rem;
+        color: black;
+        padding-inline: 1.5rem;
+        
+        background-color: rgb(235, 235, 235);
+        height: 12rem;
+      }
+@media only screen and (max-width: 1000px){
+  a { text-decoration: none;
+    color:#000000;
+    
+     }
+  .headerMob{
+    background-color: #fff;
+    display: block;
+    z-index: 5;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .header{
+    display: none;
+  }
+  /*beginning of burger menu*/
+    .burger-menu-list {
+      list-style: none;
+      display: none;
+      text-align: left;
+      position: relative;
+      padding: none;
+    }
+    .burger-menu-list.show {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left:0;
+      z-index: 4;
+      width: 100%;
+    }
+    .burger-menu-icon{
+      height: 50px;
+      width: 70px;
+      padding-left: 20px ;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      padding-top: 10px;
+      font-size: 0;
+    }
+    .burger-menu-list li {
+      background-color: rgb(255, 255, 255);
+      padding-left: 10px;
+      padding-top:  10px;
+      padding-bottom: 10px;
+      font-weight: 500;
+      position: relative;
+      font-size: 16px;
+    }
+    .burger-menu-list a{
+      /*display: block;**/
+      background-color: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      margin-top: -4px;
+    }
+    .burger-menu-list {
+      box-shadow: 0 5px 6px -6px rgb(0, 0, 0);
+      position: relative;
+    }
+
+  .burger-menu-list li:hover{
+      background-color: #83b0b8;
+  }
+  /*end of burger menu*/
+  /*logo*/
+  .skillsLogo{
+    height: 70px;
+    
+  }
+  /*end of header*/
+  .appLogos{
+    display: none;
+  }
+  .HeaderSeparator{
+    height: 20px;
+    width: 100vw;
+    background-color: #f57076;
+    position: relative;
+    z-index: 3;
+  }
+  /*end of burger menu*/
+  /*logo*/
+  .skillsLogo{
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 606px){
+  html{
+    
+  }
+  a { text-decoration: none;
+    color:#000000;
+    
+     }
+    /*header menu*/
+    .headerMob{
+      background-color: #fff;
+      display: block;
+      z-index: 5;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+    .header{
+      display: none;
+    }
+    /*beginning of burger menu*/
+      .burger-menu-list {
+        list-style: none;
+        display: none;
+        text-align: left;
+        position: relative;
+        padding: none;
+      }
+      .burger-menu-list.show {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left:0;
+        z-index: 4;
+        width: 100%;
+      }
+      .burger-menu-icon{
+        height: 50px;
+        width: 70px;
+        padding-left: 20px ;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        padding-top: 10px;
+        font-size: 0;
+      }
+      .burger-menu-list li {
+        background-color: rgb(255, 255, 255);
+        padding-left: 10px;
+        padding-top:  10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        position: relative;
+        font-size: 16px;
+      }
+      .burger-menu-list a{
+        /*display: block;**/
+        background-color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-top: -4px;
+      }
+      .burger-menu-list {
+        box-shadow: 0 5px 6px -6px rgb(0, 0, 0);
+        position: relative;
+      }
+
+    .burger-menu-list li:hover{
+        background-color: #83b0b8;
+    }
+    /*end of burger menu*/
+    /*logo*/
+    .skillsLogo{
+      height: 70px;
+      
+    }
+    /*end of header*/
+    .appLogos{
+      display: none;
+    }
+    .HeaderSeparator{
+      height: 20px;
+      width: 100vw;
+      background-color: #f57076;
+      position: relative;
+      z-index: 3;
+    }
+    /*end of burger menu*/
+    /*logo*/
+    .skillsLogo{
+      height: 70px;
+    }
+    /*end of header*/
+
+
+    .slide{
+      box-shadow: 0 0 0 0;
+      
+    }
+    .picturesDesc{
+      top: 5%;
+      font-size: 6vw;
+    }
+    .picturesDesc2{
+      font-size: 4.3vw;
+      left: 15%;
+      top: 5%;
+      width: 70vw;
+    }
+    .comHold{
+      flex-direction: column;
+    }
+    .committeesSection{
+    
+    }
+    .comObj{
+      width: 85%;
+      height: 560px;
+      font-size: 1rem;
+    }
+
+ 
+    .comObj img{
+      width: 100%;
+    }
+    .comHold a{
+      width: 100%;
+      height: 100%;
+
+    }
+    .join{
+      margin: auto;
+    }
+    .blueFilter{
+      display: none;
+    }
+    .spotlight{
+      
+    }
+    .spotlightImg{
+      display: none;
+    }
+    .spotlightWordsHolder{
+      top: 40px;
+      text-align: center;
+      width: 100vw;
+      
+    }
+    .spotlightWords1{
+      padding-left: 0;
+      margin-top: 10px;
+      margin-bottom: 0;
+      text-align: center;
+      
+    }
+    .spotlightWordsHolder2{
+      top: 40px;
+      
+      height: 50vh;
+      width: 80vw;
+    }
+    .spotlightWords2{
+      
+      text-align: center;
+      margin-top: 0;
+      padding: 20px;
+  
+    }
+    .bubbleThingHolder{
+      margin-left: 0px;
+    margin-right: 0px;
+    }
+    .bubbleThing{
+      width: 80vw;
+      height: 450px;
+      background-color: #fff;
+      margin-bottom: 30px;
+    }
+    .bubbleThing2{
+      height: 210px;
+      
+    }
+    .memberName{
+      font-weight: 700;
+    }
+    .seeMoreLink{
+      
+      bottom: -70px;
+    }
+    .newsDescription{
+      font-size: clamp(1rem, 2.2vw, 1.5rem)
+    }
+  
+    .Calendar{
+      width: 90vw;
+      height: 25rem;
+    }
+
+    .calendarSection{
+      height: 65vh;
+      height: 35rem
+    }
+    #div0{
+      display: none;
+    }
+    .appLogos{
+      display: none;
+    }
+    .rbLineSpot{
+      margin-left: 15% ;
+      width: 60%;
+    }
+    .partnerImg{
+      padding: 0;
+    }
+}
+
+/*@media only screen and (max-width: 600px) {
+  .headerLinks{
+    display: none;
+  }
+  .headerLinks{
+    display: none;
+  }
+  .mobile-dropdown{
+    display: inherit;
+  }
+  .mobile-dropdown li{
+    font-size: 18px;
+  list-style: none;
+  display: inline;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  }
+  .logoLink{
+    display: none;
+  }
+  .mobileHeader {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  .mobile-dropdown-content {
+    display: none;
+    position: absolute;
+    left: -24px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .mobile-dropdown:hover .mobile-dropdown-content {
+    display: block;
+  }
+  .mobile-dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
+  .mobile-dropdown-content a:hover {
+    color: #FFFFFF !important;
+    background-color: #00A4BD !important;
+  }
+}
+
+
+    
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+#lm_button{
+  background-color: rgb(212, 212, 212);
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  z-index: 2;
+  border-radius: .5rem;
+  position: relative;
+  bottom: -14rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+#lm_button:hover{
+  background-color: rgb(170, 0, 0);
+  color: white;
+}

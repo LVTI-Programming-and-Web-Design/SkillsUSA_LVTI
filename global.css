@@ -1,0 +1,95 @@
+
+
+/* mobile view */
+@media screen and (max-width: 480px) and (min-width: 370px) {
+ 
+
+  .partnerHeader{
+    position: relative;
+    top: -30px;
+    font-size: 30px;
+    margin: 0;
+  }
+  .partnerSection{
+    padding-top: 43px;
+    background-color: rgb(235, 235, 235);
+    width: 100vw;
+    /*position: relative;
+    top: 30px;*/
+  }
+  .partnerImgHldr{
+ 
+    width: 70%;
+    margin-left: -2%;
+    position: relative;
+    top: -20px;
+    display: flex;
+    flex-direction: row;
+    margin-block: 1rem;
+  }
+  .partnerImg li{
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    margin-inline: 1rem;
+    height: 100%;
+    width: 7rem;
+    
+  }
+
+  .partnerImg img{
+    display: flex;
+    flex-direction: row;
+  }
+  .partnerImg{
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .partnerImg img{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .partnerImg #morg{
+  
+    height: 100%;
+    width: 100%;
+  }
+  .partnerImg #mtc{
+
+    height: 100%;
+    width: 100%;
+  }
+  .copyrightSection{
+    position: relative;
+    /*top: -67px;*/
+    height: 75px;
+    width: 100vw;
+    background-color: rgb(31, 31, 31);
+
+  }
+
+  .copyrightSection p{
+    position: relative;
+    top: 22.5px;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+  }
+  .footer{
+    position: relative;
+    z-index: -2;
+  }
+
+
+
+  
+}
+
+
+/* DISCLAIMER: these values are for testing purposes, these are not the final values for the styles. MOCK TEST ACTIVE */ 
+/* Thi template will be used for mobile and tablet reponsive content */ 
