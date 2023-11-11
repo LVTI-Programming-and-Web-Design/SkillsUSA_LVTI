@@ -595,7 +595,7 @@ width: 100%;
   }
   .partnerSection{
     padding-top: 43px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     width: 100vw;
     /*position: relative;
     top: 30px;*/
@@ -1151,11 +1151,11 @@ cursor: pointer;
       
     }
     .picturesDesc{
-      top: 5%;
+      top: 3%;
       font-size: 6vw;
     }
     .picturesDesc2{
-      font-size: 4.3vw;
+      font-size: 15px;
       left: 15%;
       top: 5%;
       width: 70vw;
