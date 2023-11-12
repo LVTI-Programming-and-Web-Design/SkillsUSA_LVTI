@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1f1f1f">
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
-    <link rel="stylesheet" href="social.css">
     <title>Document</title>
 </head>
 <body>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="donate.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -44,8 +44,7 @@
       </div>
       <div class="HeaderSeparator"></div>
     </div>  
-
-    <div style="position: absolute; z-index: 20; top: 120px;"><a href="/social/essocial.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
+    <div style="position: absolute; z-index: 2; top: 120px;"><a href="/donate/donate.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
 
     <div class="header">
       
@@ -80,54 +79,56 @@
             height={100}
           />
           </a>
-    </div>
-    <div class="placeHolderDiv"></div>
-
-    <ul class="appLogos">
-      <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
-      <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
-      <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
-    </ul>
-
-    <div class="headerImageHolder">
-      <div class="headerTextHolder">
-          <p class="headerText">SOCIAL COMMITTEE</p>
       </div>
-    </div>
-      <div class="secondSection">
-      <div class="contentHolder">
-      <div class="textBarr">
-      <div class="infoText">
-        <p>
-          To provide opportunities for our chapter to give back to our local
-          community through service.</p>
-  
+      <div class="placeHolderDiv"></div>
+
+      <ul class="appLogos">
+        <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
+        <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
+        <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
+      </ul>
+
+      <div class="headerImageHolder">
+        <img src="skillsBackground.jpg" class="headerImage"/>
+        <div class="headerTextHolder">
+            <p class="headerText">DONAR</p>
         </div>
-        </div>
-      </div>
-  
-      <iframe width="700" height="405" class="youtubeVideos" src="https://www.youtube.com/embed/j38qRNFMAe0?si=n5pXZdogPFZds0t1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-      <div class="contentHolder">
+        <div class="secondSection">
+        <div class="contentHolder">
         <div class="textBarr">
-  
+        <div class="infoText">
+          <p >SkillsUSA es una organización 501(c)3 y nuestro capítulo depende en gran medida de donaciones de contribuyentes que ayudan a nuestros estudiantes a crecer y convertirse en futuros líderes, comerciantes y miembros impactantes de su comunidad. Si está interesado en donar a nuestro capítulo de SkillsUSA, cada dólar contribuirá en gran medida a apoyar la dedicación de nuestro capítulo para ayudar a nuestra comunidad. </p>
+            
+            <h3>Si está interesado en donar, envíe un cheque a: </h3>
+            <h3>Lynn Tech SkillsUSA 
+
+              80 Neptune Blvd. 
+              
+              Lynn, MA 01902 </h3>
+            
+
+            <p>Si está interesado en convertirse en <span style="font-weight: Bold;"> patrocinador habitual </span> de nuestro programa, estaremos encantados de hablar con usted. No dude en comunicarse con el asesor del capítulo, Jason McCuish, en <span style="font-weight: Bold;">mccuishj@lynnschools.org</span> o llamando a la escuela al <span style="font-weight: negrita;">(781) 477-7420 Ext. 3037.</span></p>
+            
         </div>
+        </div>
+        <!--<button class="donateButt">Donate Now</button>-->
       </div>
       </div>
       <div class="partnerSection">
-        <p class="partnerHeader">Business Partners</p>
+        <p class="partnerHeader">Compañeros de Negocio</p>
         <div class="partnerImgHldr">
           <ul class="partnerImg">
-            <li><img src="/alumni.svg" id="morg" style="width: 140px;"></li>
+            <li><img src="/alumni.svg" id="mtc" style="width: 120px;"></li>
           </ul>
         </div>
       </div>
-    <div class="copyrightSection">
-      <p>
-        © 2022 SkillsUSA LVTI, Inc.
-      </p>
-    </div>
-    </div>
+      <div class="copyrightSection">
+        <p>
+          © 2022 SkillsUSA LVTI, Inc.
+        </p>
+      </div>
+      </div>
+    
     <script>
       function toggleMenu() {
         var menu = document.querySelector('.burger-menu-list');
