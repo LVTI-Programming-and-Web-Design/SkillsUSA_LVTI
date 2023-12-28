@@ -23,71 +23,8 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
     rel="stylesheet"/>
-    <div class="headerMob">
-      <div class="burger-menu">
-        <div class="burger-menu-icon" onclick="toggleMenu()">
-          <img src="/index/burger.svg ">
-        </div>
-      </div>
-      <a href="/index/index.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
-      <div class="burger-menu-list">
-        <a href="/contactUs/contact.html">CONTACT US</a>
-        <a href="/memberPage/members.html">MEMBERS</a>
-        <a href="/donate/donate.html">DONATE</a>
-        <a href="/index/index.html#calendar">CALENDAR</a>
-        <a href="/news/news.html">NEWS</a>
-        <a href="/aboutUs/aboutUs.html">ABOUT US</a>
-        <a href="/awards/awards.html">AWARDS</a>
-        <a href="/fundraising/fundraising.html">FUNDRAISING</a>
-        <a href="/championship/champ.html">CHAMPIONSHIPS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMMUNITY SERVICE</a><a href="/leadership/leadership.html">LEADERSHIP</a><a href="/recruitment/recru.html">RECRUITMENT</a>
-            
-      </div>
-      <div class="HeaderSeparator"></div>
-    </div>  
-
-    <div style="position: absolute; z-index: 20; top: 120px;"><a href="/championship/champ.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
-
-    <div class="header">
-      
-      <ul class="headerLinks" >
-        <li><a href="/donate/donate.html">DONATE</a></li>
-        <li><a href="/index/index.html#calendar">CALENDAR</a></li>
-        <li><a href="/news/news.html">NEWS</a></li>
-        <li>
-          <div class="dropdown">
-            <a href="/index/index.html#comm">COMMITTEES</a>
-            <div class="dropdown-content">
-            <a href="/fundraising/fundraising.html">FUNDRAISING</a>
-            <a href="/championship/champ.html">CHAMPIONSHIPS</a>
-            <a href="/social/social.html">SOCIAL</a>
-            <a href="/community/community.html">COMMUNITY SERVICE</a>
-            <a href="/leadership/leadership.html">LEADERSHIP</a>
-            <a href="/recruitment/recru.html">RECRUITMENT</a>
-            
-            </div>
-          </div>
-        </li>
-   
-        <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
-        <li><a href="/awards/awards.html">AWARDS</a></li>
-        <li><a href="/contactUs/contact.html">CONTACT&nbsp;US</a></li>
-        <li><a href="/memberPage/members.html">MEMBERS</a></li>
-      </ul>
-        <a href="/index/index.html" class="logoLink"><img
-            src="/header/SkillsLVTI.jpg"
-            class="SkillsLogo"
-            alt="SKILLS USA LOGO"
-            height={100}
-          />
-          </a>
-    </div>
-    <div class="placeHolderDiv"></div>
-
-    <ul class="appLogos">
-      <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
-      <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
-      <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
-    </ul>
+    <link rel = "stylesheet" href = "../index/styles.css"/>
+    <div id = "header"></div>
 
     <div class="headerImageHolder">
       <div class="headerTextHolder">
@@ -134,7 +71,8 @@
         </div>
       </footer>
 
-  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src = "../loadContent.js"></script>
     <script>
       function toggleMenu() {
         var menu = document.querySelector('.burger-menu-list');

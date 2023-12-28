@@ -7,46 +7,50 @@
     <title>Document</title>
 </head>
 <body>
-      <!--  Mobile Viewport -->
+
+
+  <!-- HEADER -START- -->
   <div class="headerMob">
     <div class="burger-menu">
       <div class="burger-menu-icon" onclick="toggleMenu()">
         <img src="burger.svg">
       </div>
     </div>
-    <img src="/header/SkillsLVTI.jpg" class="skillsLogo">
-    <ul class="burger-menu-list">
-      <li><a href="/contactUs/contact.html">CONTACT US</a></li>
-      <li><a href="/mobileTest/mob.html">MEMBERS</a></li>
-      <li><a href="/donate/donate.html">DONATE</a></li>
-      <li><a href="/index/index.html#calendar">CALENDAR</a></li>
-      <li><a href="/news/news.html">NEWS</a></li>
-      <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
-      <li><a href="/awards/awards.html">AWARDS</a></li>
-
-    <!-- drop down menu options -->
-      <li><a href="/fundraising/fundraising.html">FUNDRAISING</a></li>
-      <li><a href="/championship/champ.html">CHAMPIONSHIPS</a></li>
-      <li><a href="/social/social.html">SOCIAL</a></li>
-      <li><a href="/community/community.html">COMMUNITY SERVICE</a></li>
-    </ul>
-  </div>
-
-
-
-
-
-
-   
-  <!--Desktop viewport -->
-  <div class="header">
-    <ul class="headerLinks" >
-      <li><a href="/donate/donate.html">DONATE</a></li>
-      <li><a href="/index/index.html#calendar">CALENDAR</a></li>
-      <li><a href="/news/news.html">NEWS</a></li>
+    <a href="/index/EsIndex.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
+    <div class="burger-menu-list">
+      <a href="/contactUs/contact.html">CONTACT US</a>
+      <a href="/memberPage/members.html">MEMBERS</a>
+      <a href="/donate/donate.html">DONATE</a>
+      <a href="/index/index.html#calendar">CALENDAR</a>
+      <a href="/news/news.html">NEWS</a>
+      <a href="/aboutUs/aboutUs.html">ABOUT US</a>
+      <a href="/awards/awards.html">AWARDS</a>
+      <a href="/fundraising/fundraising.html">FUNDRAISING</a>
+      <a href="/championship/champ.html">CHAMPIONSHIPS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMMUNITY SERVICE</a><a href="/leadership/leadership.html">LEADERSHIP</a><a href="/recruitment/recru.html">RECRUITMENT</a>
+          
+      
+    </div>
+    <div class="HeaderSeparator"></div>
+   </div> 
  
+   <div style="position: absolute; z-index: 2; top: 120px;"><a href="/index/EsIndex.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">Spanish</a></div> 
+  <div class="header">
+    <a href="/index/EsIndex.html" class="logoLink"><img
+        src="/header/SkillsLVTI.jpg"
+        class="SkillsLogo"
+        alt="SKILLS USA LOGO"
+        height={100}
+      />
+      </a>
+      
+      <!-- WINDOWS DESKTOP VIEW NAVIGATION -START- -->
+    <ul class="headerLinks" >
       <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
+      <li><a href="/news/news.html">NEWS</a></li>
       <li><a href="/awards/awards.html">AWARDS</a></li>
+
+
+      <!--
       <li>
         <div class="dropdown">
           <a href="/index/index.html#comm">COMMITTEES</a>
@@ -55,18 +59,29 @@
           <a href="/championship/champ.html">CHAMPIONSHIPS</a>
           <a href="/social/social.html">SOCIAL</a>
           <a href="/community/community.html">COMMUNITY SERVICE</a>
+          <a href="/leadership/leadership.html">LEADERSHIP</a>
+          <a href="/recruitment/recru.html">RECRUITMENT</a>
+          
           </div>
         </div>
       </li>
-      <li><a href="/contactUs/contact.html">CONTACT US</a></li>
+    -->
+
+
+      <li><a href="/contactUs/contact.html">CONTACT&nbsp;US</a></li>
+      <li><a href="/donate/donate.html">DONATE</a></li>
+
+      <!-- undecided navs START-->
+      <li><a href="/index/index.html#calendar">CALENDAR</a></li>
       <li><a href="/memberPage/members.html">MEMBERS</a></li>
+      <!-- undecided navs END-->
+
     </ul>
+        
+      <!-- WINDOWS DESKTOP VIEW NAVIGATION -START- -->
 
 
-
-
-    <!--Mobile dropdown -->
-      <div class="mobile-dropdown">
+    <div class="mobile-dropdown">
         <p>ppppppp</p>
       <ul class="mobile-dropdown-content" >
         <li><a href="/donate/donate.html">DONATE</a></li>
@@ -75,6 +90,8 @@
    
         <li><a href="/aboutUs/aboutUs.html">ABOUT US</a></li>
         <li><a href="/awards/awards.html">AWARDS</a></li>
+
+        <!--
         <li>
           <div class="dropdown">
             <a href="/index/index.html#comm">COMMITTEES</a>
@@ -83,9 +100,14 @@
             <a href="/championship/champ.html">CHAMPIONSHIPS</a>
             <a href="/social/social.html">SOCIAL</a>
             <a href="/community/community.html">COMMUNITY SERVICE</a>
+            <a href="/leadership/leadership.html">LEADERSHIP</a>
+            <a href="/recruitment/recru.html">RECRUITMENT</a>
             </div>
           </div>
         </li>
+
+      -->
+      
         <li><a href="/contactUs/contact.html">CONTACT US</a></li>
         <li><a href="/memberPage/members.html">MEMBERS</a></li>
       </ul>
@@ -97,13 +119,16 @@
         />
         </a>
     </div>
-    <a href="/index/index.html" class="logoLink"><img
-        src="/header/SkillsLVTI.jpg"
-        class="SkillsLogo"
-        alt="SKILLS USA LOGO"
-        height={100}
-      />
-      </a>
   </div>
+  
+  <div class="placeHolderDiv"></div>
+
+  <ul class="appLogos">
+    <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
+    <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
+    <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
+  </ul>
+
+<!-- HEADER -END- -->
 </body>
 </html>

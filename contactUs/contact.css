@@ -415,3 +415,7 @@ body {
         
       }
       
+
+  .mobile-dropdown{
+    display: none;
+  }

@@ -37,74 +37,9 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
     rel="stylesheet"/>
-    <div class="headerMob">
-      <div class="burger-menu">
-        <div class="burger-menu-icon" onclick="toggleMenu()">
-          <img src="burger.svg">
-        </div>
-      </div>
-        <a href="/index/EsIndex.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
-      <div class="burger-menu-list">
-        <a href="/contactUs/EsContact.html">CONTÁCTENOS</a>
-        <a href="/memberPage/Esmember.html">MIEMBROS</a>
-        <a href="/donate/EsDonate.html">DONAR</a>
-        <a href="/index/EsIndex.html#calendar">CALENDARIO</a>
-        <a href="/news/news.html">NOTICIAS</a> <!-- Es / espanol page missing. Can only display page in english lang-->
-        <a href="/aboutUs/EsAboutUs.html">ACERCA DE NOSOTROS</a>
-        <a href="/awards/awards.html">PREMIOS</a> <!-- Es / espanol page missing. Can only display page in english lang-->
-        <a href="/fundraising/EsFundraising.html"> RECAUDACIÓN DE FONDOS</a>
-        <a href="/championship/esChamp.html">CAMPEONATOS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMUNIDAD SERVICIO</a><a href="/leadership/leadership.html">LIDERAZGO</a><a href="/recruitment/recru.html">RECLUTAMIENTO</a>
-        
-      </div>
-      <div class="HeaderSeparator"></div>
-    </div>  
+    <link rel = "stylesheet" href = "../index/styles.css"/>
 
-    <div style="position: absolute; z-index: 2; top: 120px;"><a href="/donate/donate.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
-
-    <!-- ACTUAL windows shown and functioning header - START-->
-    <div class="header">
-      <ul class="headerLinks" >
-        <li><a href="/donate/EsDonate.html">DONAR</a></li>
-             <li><a href="/index/EsIndex.html">CALENDARIO</a></li>
-             <li><a href="/news/news.html">NOTICIAS</a></li> <!-- Es / espanol page missing. Can only display page in english lang-->
-             <li>
-              <div class="dropdown">
-                <a href="/index/EsIndex.html#comm">COMITÉS</a> <!-- Dont requir5e a redirect or anchor tag (<a>), its just a drop down-->
-                 <div class="dropdown-content">
-                 <a href="/fundraising/EsFundraising.html"> RECAUDACIÓN DE FONDOS</a>
-                 <a href="/championship/esChamp.html">CAMPEONATOS</a>
-                 <a href="/social/essocial.html">SOCIAL</a>
-                 <a href="/community/esCommunity.html">SERVICIO COMUNITARIO</a>
-                 <a href="/leadership/esLeadership.html">LIDERAZGO</a>
-                 <a href="/recruitment/Esrecru.html">RECLUTAMIENTO</a>
-            
-            </div>
-          </div>
-        </li>
-   
-        <li><a href="/aboutUs/EsAboutUs.html">ACERCA DE NOSOTROS</a></li>
-        <li><a href="/awards/awards.html">PREMIOS</a></li> <!-- Es / espanol page missing. Can only display page in english lang-->
-        <li><a href="/contactUs/EsContact.html">CONTÁCTENOS</a></li>
-        <li><a href="/memberPage/Esmember.html">MIEMBROS</a>
-      </ul>
-        <a href="/index/index.html" class="logoLink"><img
-            src="/header/SkillsLVTI.jpg"
-            class="SkillsLogo"
-            alt="SKILLS USA LOGO"
-            height={100}
-          />
-          </a>
-      </div>
-          <!-- ACTUAL windows shown and functioning header - END -->
-
-
-      <div class="placeHolderDiv"></div>
-
-      <ul class="appLogos">
-        <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
-        <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
-        <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
-      </ul>
+    <div id = "header"></div>
 
       <div class="headerImageHolder">
         <img src="skillsBackground.jpg" class="headerImage"/>
@@ -151,6 +86,9 @@
         </div>
       </footer>
     
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src = "../loadContent.js"></script>
     <script>
       function toggleMenu() {
         var menu = document.querySelector('.burger-menu-list');

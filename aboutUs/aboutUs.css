@@ -38,6 +38,8 @@ html {
     font-weight: bold;
     cursor: pointer;
   }
+
+  
   @media only screen and (max-width: 1300px){
 
     .headerLinks{
