@@ -243,18 +243,27 @@ body {
       margin: 0;
     }
     .partnerSection{
-      padding-top: 43px;
+     /* padding-top: 43px; */
       background-color: rgb(235, 235, 235);
-      width: 100vw;
+      /* width: 100vw; */
       /*position: relative;
       top: 30px;*/
     }
+  
+    .partnerImg{
+      display: block;
+      flex-direction: row; 
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 1.5rem;
+      width: 100%; 
+       
+    }
+  
     .partnerImgHldr{
-      
-      width: 70%;
-      margin-left: 15%;
-      position: relative;
-      top: -20px;
+      align-items: center;
+      justify-content: center;
+     
     }
     .partnerImg li{
       display: inline-block;
@@ -265,15 +274,19 @@ body {
     .partnerImg img{
     }
     .partnerImg #morg{
-      margin-bottom: 5%;
+      margin-bottom: 0%;
       height: 50%;
       width: 50%;
     }
-    .partnerImg #mtc{
-      margin-top: 0%;
-      height: 60%;
-      width: 60%;
-    }
+    .partnerImg #mtc1{
+      height: 5rem;
+     }
+     .partnerImg #mtc2{
+      height: 7rem;
+      position: relative;
+      bottom: -.5rem;
+  
+     }
     .copyrightSection{
       position: relative;
       /*top: -67px;*/
