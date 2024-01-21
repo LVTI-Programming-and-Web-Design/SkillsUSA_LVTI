@@ -148,7 +148,7 @@ html {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: auto auto;
-    row-gap: 20px;
+    row-gap: 70px;
   }
   .NewsHeader{
     position: relative;
@@ -227,7 +227,7 @@ html {
   top: 0;
   background-color: white;
   position: relative;
-  height: 20%;
+  height: 40%;
   align-items: center;
 
   

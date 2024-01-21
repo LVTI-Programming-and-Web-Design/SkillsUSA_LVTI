@@ -335,7 +335,7 @@ width: 100%;
     background-color: rgb(235, 235, 235);
   }
   .NewsArea{
-
+    box-shadow: 0 1px 3px -2px rgb(0, 0, 0);
   }
   .NewsHeader{
     font-size: 35px;
@@ -423,7 +423,7 @@ width: 100%;
 
 
 .profileImg{
-  height: 40%;
+  height: 70%;
   width: inherit;
   display: block;
   object-fit: cover;
@@ -434,7 +434,7 @@ width: 100%;
   top: 0;
   background-color: white;
   position: relative;
-  height: 45%;
+  height: 15%;
   
 }
 .memberName{
@@ -1243,7 +1243,7 @@ cursor: pointer;
       margin-bottom: 30px;
     }
     .bubbleThing2{
-      height: 210px;
+      height: 74px;
       
     }
     .memberName{
