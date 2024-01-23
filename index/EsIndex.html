@@ -26,108 +26,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
         rel="stylesheet"/>
-        <div class="headerMob">
-          <div class="burger-menu">
-            <div class="burger-menu-icon" onclick="toggleMenu()">
-              <img src="burger.svg">
-            </div>
-          </div>
-            <a href="/index/EsIndex.html"><img src="/header/SkillsLVTI.jpg" class="skillsLogo"></a>
-          <div class="burger-menu-list">
-            <a href="/contactUs/EsContact.html">CONTÁCTENOS</a>
-            <a href="/memberPage/Esmember.html">MIEMBROS</a>
-            <a href="/donate/EsDonate.html">DONAR</a>
-            <a href="/index/EsIndex.html#calendar">CALENDARIO</a>
-            <a href="/news/news.html">NOTICIAS</a> <!-- Es / espanol page missing. Can only display page in english lang-->
-            <a href="/aboutUs/EsAboutUs.html">ACERCA DE NOSOTROS</a>
-            <a href="/awards/awards.html">PREMIOS</a> <!-- Es / espanol page missing. Can only display page in english lang-->
-            <a href="/fundraising/EsFundraising.html"> RECAUDACIÓN DE FONDOS</a>
-            <a href="/championship/esChamp.html">CAMPEONATOS</a><a href="/social/social.html">SOCIAL</a><a href="/community/community.html">COMUNIDAD SERVICIO</a><a href="/leadership/leadership.html">LIDERAZGO</a><a href="/recruitment/recru.html">RECLUTAMIENTO</a>
-            
-          </div>
-          <div class="HeaderSeparator"></div>
-        </div>  
-        <div style="position: absolute; z-index: 2; top: 120px;"><a href="/index/index.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
-        <div class="header">
-          <a href="/index/index.html" class="logoLink"><img
-              src="/header/SkillsLVTI.jpg"
-              class="SkillsLogo"
-              alt="SKILLS USA LOGO"
-              height={100}
-            />
-            </a>
-          <ul class="headerLinks" >
-            <li><a href="/donate/EsDonate.html">DONAR</a></li>
-             <li><a href="/index/EsIndex.html">CALENDARIO</a></li>
-             <li><a href="/news/news.html">NOTICIAS</a></li> <!-- Es / espanol page missing. Can only display page in english lang-->
-            <!--
-              <li>
-              <div class="dropdown">
-                <a href="/index/EsIndex.html#comm">COMITÉS</a>  Dont requir5e a redirect or anchor tag (<a>), its just a drop down
-                 <div class="dropdown-content">
-                 <a href="/fundraising/EsFundraising.html"> RECAUDACIÓN DE FONDOS</a>
-                 <a href="/championship/esChamp.html">CAMPEONATOS</a>
-                 <a href="/social/essocial.html">SOCIAL</a>
-                 <a href="/community/esCommunity.html">SERVICIO COMUNITARIO</a>
-                 <a href="/leadership/esLeadership.html">LIDERAZGO</a>
-                 <a href="/recruitment/Esrecru.html">RECLUTAMIENTO</a>
-                
-                </div>
-              </div>
-            </li>
-          -->
-            <li><a href="/aboutUs/EsAboutUs.html">ACERCA DE NOSOTROS</a></li>
-            <li><a href="/awards/awards.html">PREMIOS</a></li> <!-- Es / espanol page missing. Can only display page in english lang-->
-            <li><a href="/contactUs/EsContact.html">CONTÁCTENOS</a></li>
-            <li><a href="/memberPage/Esmember.html">MIEMBROS</a>
-          </ul>
-
-
-          <!-- Mobile Drop Down START-->
-          <div class="mobile-dropdown">
-              <p>ppppppp</p>
-            <ul class="mobile-dropdown-content" >
-              <li><a href="/donate/EsDonate.html">DONATE</a></li>
-              <li><a href="/index/EsIndex.html#calendar">CALENDAR</a></li>
-              <li><a href="/news/news.html">NEWS</a></li><!-- Es / espanol page missing. Can only display page in english lang-->
-         
-              <li><a href="/aboutUs/EsAboutUs.html">ABOUT US</a></li>
-              <li><a href="/awards/awards.css">AWARDS</a></li><!-- Es / espanol page missing. Can only display page in english lang-->
-              <li>
-                <div class="dropdown">
-                  <a href="/index/EsIndex.html#comm">COMMITTEES</a>
-                  <div class="dropdown-content">
-                  <a href="/fundraising/EsFundraising.html">FUNDRAISING</a>
-                  <a href="/championship/esChamp.html">CHAMPIONSHIPS</a>
-                  <a href="/social/essocial.html">SOCIAL</a>
-                  <a href="/community/esCommunity.html">COMMUNITY SERVICE</a>
-                  <a href="/leadership/esLeadership.html">LEADERSHIP</a>
-                  <a href="/recruitment/Esrecru.html">RECRUITMENT</a>
-                  </div>
-                </div>
-              </li>
-              <li><a href="/contactUs/EsContact.html">CONTACT US</a></li>
-              <li><a href="/memberPage/Esmember.html">MEMBERS</a></li>
-            </ul>
-            <a href="/index/EsIndex.html" class="mobile-logoLink"><img
-                src="/header/SkillsLVTI.jpg"
-                class="SkillsLogo"
-                alt="SKILLS USA LOGO"
-                height={100}
-              />
-              </a>
-          </div>
-           <!-- Mobile Drop Down END-->
-
-        </div>
-        
-        <div class="placeHolderDiv"></div>
-  
-        <ul class="appLogos">
-          <li><img src ="/header/youtube.png" id="yt" onclick="parent.open('https://youtu.be/UHoOkZ7zWu4')" style="cursor: pointer;"></li>
-          <li><img src ="/header/fb.png" id="facebook" onclick="parent.open('https://www.facebook.com/LVTISkillsUSA/')" style="cursor: pointer;"/></li>
-          <li><img src ="/header/insta.png" id="insta" onclick="parent.open('https://www.instagram.com/skillsusalvti/?hl=en')" style="cursor: pointer;"/></li>
-        </ul>
+        <!-- HEADER -START- -->
+  <div id = "header"></div>
+  <div style="position: absolute; z-index: 2; top: 120px;"><a href="/index/index.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
+  <!-- HEADER -END- -->
 
         <div class="blueFilter"></div>
         <div class="slider">
@@ -307,6 +209,8 @@
           </div>
         </div>
       </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src = "../loadContent.js"></script>
       <script>
         // variable is obtained through document(html above) . querySelectorAll(grabs anything from html above, it has to be specified inside the "")
         const buttons = document.querySelectorAll("[data-carousel-button]")

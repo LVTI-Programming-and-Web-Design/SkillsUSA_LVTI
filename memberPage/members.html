@@ -78,7 +78,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
     <script>
       //v
-       var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/eli.jpg","/memberPage/members/ant.jpg", "/memberPage/members/gis.jpg","/memberPage/members/baka.jpg", "/memberPage/members/jojo.jpg","/memberPage/members/baka.jpg",
+       var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
        "/memberPage/members/chris.jpg","/memberPage/members/adb.jpg","/memberPage/members/este.jpg","/memberPage/members/jar.jpg","/memberPage/members/say.jpg", "/memberPage/members/nac.jpg","/memberPage/members/daf.jpg","/memberPage/members/jose.jpg","/memberPage/members/dana.jpg","/memberPage/members/andy.jpg"]
         var leader = ["Jason McCuish","12th Grade", "English Department Head", "Advisor"]
         var leader2 = ["Ms. Price","12th-11th Grade", "English", "Advisor"]
@@ -122,34 +122,48 @@
         var associates = [associate1,associate2,associate3,associate4,associate5,associate6,associate7,associate8]
 
 
+        //this variable is used to keep the symetry of the page by making the last member have a large padding and creating a new row where members with no picture will begin
+        membersWithPictures=8
+
+
+
         for (let i = 0; i < membersAmount; i++){
             //
     
             var currentMember = members[i]
             console.log(currentMember, i)
             // MEMBERS!!!! //
+        
         var list = document.createElement('li');
         list.id = 'list'+i;
         list.className = 'bubbleThingHolder';
         document.body.appendChild(list);
         document.getElementById("membList").appendChild(list);
           //
-
+        
         var div = document.createElement('div');
         div.id = 'div'+i;
         div.className = 'bubbleThing';
         document.body.appendChild(div);
         document.getElementById("list"+i).appendChild(div);
         var img = document.createElement("img");
+        
+        if (i<membersWithPictures){
         img.src = memberImgs[i];
         img.id = 'profileImg'+i;
         img.className = 'profileImg'
         var block = document.getElementById("div"+i)
         block.appendChild(img);
-
         var div2 = document.createElement('div');
         div2.id = 'bottomBubble'+i;
         div2.className = 'bubbleThing2';
+      }
+      else{
+        var div2 = document.createElement('div');
+        div2.id = 'bottomBubble'+i;
+        div2.className = 'bubbleThing2';
+        div.className = 'bubbleThingNoPic';
+      }
         document.body.appendChild(div2);
         document.getElementById("div"+i).appendChild(div2);
 
@@ -183,7 +197,16 @@
         memberPosition.className = 'memberPosition';
         var element = document.getElementById('bottomBubble'+i);
         element.appendChild(memberPosition);
+
+        if (i==7){
+          var br = document.createElement('br');
+          br.id = 'list'+i;
+          br.className = 'break';
+          document.body.appendChild(br);
+          document.getElementById("membList").appendChild(br);
         }
+        }
+
           /*
         var AssoHeader = document.createElement("p");
         var AssoTxt = document.createTextNode("Associates")
