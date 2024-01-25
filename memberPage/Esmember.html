@@ -24,15 +24,21 @@
       />
       <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&display=swap" 
       rel="stylesheet"/>
-   
-       <div id = "header"></div>
-        
+  
+      
+     <div id = "header"></div>
+     <div style="position: absolute; z-index: 20; top: 120px;"><a href="/memberPage/members.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">English</a></div> 
+
+     
         <div class="memberSide">
-          <p class="memberHeader"> Miembros<div class="rbLine"></div></p>
+          <p class="memberHeader"> Asesores<div class="rbLine"></div></p>
           <ul class="MembersList" id="membList">
   
           </ul>
-
+          <p class="memberHeader"> Oficiales<div class="rbLine"></div></p>
+          <ul class="MembersList" id="officerList">
+  
+          </ul>
         </div>
         <div class="associatesSide">
         </div>
@@ -58,21 +64,8 @@
 
 
         <footer class = 'footer'>
-          <div class="footer">
-            <div class="partnerSection">
-            <!--  <p class="partnerHeader">Business Partners</p> -->
-           <!--   <div class="partnerImgHldr">-->
-                <ul class="partnerImg">
-                  <li><img src="/index/atf.png" id="mtc1"></li>
-                   <li><img src="/alumni.svg" id="mtc2" ></li>
-                </ul>
-             <!-- </div> -->
-            </div>
-            <div class="copyrightSection">
-              <p>
-                © 2022 SkillsUSA LVTI, Inc.
-              </p>
-            </div>
+          <div class="footer" id="footer">
+            
           </div>
         </footer>
 
@@ -82,23 +75,25 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src = "../loadContent.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src = "../loadContent.js"></script>
+      <script src = "../loadFooter.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
     <script>
       //v
-       var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/eli.jpg","/memberPage/members/ant.jpg", "/memberPage/members/gis.jpg","/memberPage/members/baka.jpg", "/memberPage/members/jojo.jpg","/memberPage/members/baka.jpg",
+       var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
        "/memberPage/members/chris.jpg","/memberPage/members/adb.jpg","/memberPage/members/este.jpg","/memberPage/members/jar.jpg","/memberPage/members/say.jpg", "/memberPage/members/nac.jpg","/memberPage/members/daf.jpg","/memberPage/members/jose.jpg","/memberPage/members/dana.jpg","/memberPage/members/andy.jpg"]
-       var leader = ["Jason McCuish","12th Grade", "English Department Head", "Advisor"]
-        var leader2 = ["Ms. Price","12th-11th Grade", "English", "Advisor"]
-        var leader3 = ["Ms. B","12th-11th Grade", "Childcare Shop", "Advisor"]
-        var leader4 = ["Mr. Rateu","12th-11th Grade", "TV media shop", "Advisor"]
-        var president = ["Anthony","12th Grade", "TV Media", "President"]
-        var vicePres = ["Luis","12th Grade", "Electrical", "Vice President"]
-        var secretary = ["Giselle","12th Grade", "Health Tech", "Secretary"]
-        var treasurer = ["Dana","10th Grade", "Health Tech", "Treasurer"]
-        var member1 = ["Saydy","12th Grade", "Health Tech", ""]
+        var leader = ["Jason McCuish","12-9th grade", "English Department Head", "Assesor"]
+        var leader2 = ["Ms. Price","12th-11th Grade", "English", "Assesor"]
+        var leader3 = ["Ms. B","12th-11th Grade", "Childcare Shop", "Assesor"]
+        var leader4 = ["Mr. Rateu","12th-11th Grade", "TV media shop", "Assesor"]
+        var president = ["Anthony","12th Grade", "TV Media", "Presidente"]
+        var vicePres = ["Luis","12th Grade", "Electrical", "Vice Presidente"]
+        var secretary = ["Giselle","12th Grade", "Health Tech", "Secretaria"]
+        var treasurer = ["Dana","10th Grade", "Health Tech", "Tesorera"]
+       /* var member1 = ["Saydy","12th Grade", "Health Tech", ""]
         var member2 = ["Megan","12th Grade", "Childcare Shop", ""]
         var member3 = ["Ryan","12th Grade", "IT", ""]
         var member4 = ["Jared","12th Grade", "IT", ""]
@@ -114,9 +109,10 @@
         var member14 = ["Hailley","10th Grade", "TV media", ""]
         var member15 = ["Alexander","10th Grade", "Health Tech", ""]
         var member16 = ["Andy", "9th Grade", "N/A"]
-        var member17 = ["Bryan", "8th Grade", "N/A"]
-        var members =[leader, leader2, leader3,leader4, president, vicePres, secretary, treasurer, member1, member2, member3, member4,
-         member5, member6, member7, member8,member9,member10, member11, member12, member13, member14, member15, member16, member17]
+        var member17 = ["Bryan", "8th Grade", "N/A"]*/
+        var members =[leader, leader2, leader3,leader4, president, vicePres, secretary, treasurer
+        /* member1, member2, member3, member4,
+    member5, member6, member7, member8,member9,member10, member11, member12, member13, member14, member15, member16, member17 */]
 
         var membersAmount = members.length;
 
@@ -132,34 +128,52 @@
         var associates = [associate1,associate2,associate3,associate4,associate5,associate6,associate7,associate8]
 
 
+        //this variable is used to keep the symetry of the page by making the last member have a large padding and creating a new row where members with no picture will begin
+        membersWithPictures=8
+
+        var loc = "membList"
+
         for (let i = 0; i < membersAmount; i++){
             //
     
             var currentMember = members[i]
             console.log(currentMember, i)
             // MEMBERS!!!! //
+            if (i==4){
+              loc = "officerList"
+            }
+            
+        
         var list = document.createElement('li');
         list.id = 'list'+i;
         list.className = 'bubbleThingHolder';
         document.body.appendChild(list);
-        document.getElementById("membList").appendChild(list);
+        document.getElementById(loc).appendChild(list);
           //
-
+        
         var div = document.createElement('div');
         div.id = 'div'+i;
         div.className = 'bubbleThing';
         document.body.appendChild(div);
         document.getElementById("list"+i).appendChild(div);
         var img = document.createElement("img");
+        
+        if (i<membersWithPictures){
         img.src = memberImgs[i];
         img.id = 'profileImg'+i;
         img.className = 'profileImg'
         var block = document.getElementById("div"+i)
         block.appendChild(img);
-
         var div2 = document.createElement('div');
         div2.id = 'bottomBubble'+i;
         div2.className = 'bubbleThing2';
+      }
+      else{
+        var div2 = document.createElement('div');
+        div2.id = 'bottomBubble'+i;
+        div2.className = 'bubbleThing2';
+        div.className = 'bubbleThingNoPic';
+      }
         document.body.appendChild(div2);
         document.getElementById("div"+i).appendChild(div2);
 
@@ -193,7 +207,16 @@
         memberPosition.className = 'memberPosition';
         var element = document.getElementById('bottomBubble'+i);
         element.appendChild(memberPosition);
+
+        if (i==7){
+          var br = document.createElement('br');
+          br.id = 'list'+i;
+          br.className = 'break';
+          document.body.appendChild(br);
+          document.getElementById("membList").appendChild(br);
         }
+        }
+
           /*
         var AssoHeader = document.createElement("p");
         var AssoTxt = document.createTextNode("Associates")
