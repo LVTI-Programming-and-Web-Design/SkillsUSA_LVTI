@@ -27,13 +27,18 @@
   
       
      <div id = "header"></div>
+     <div style="position: absolute; z-index: 20; top: 120px;"><a href="/memberPage/Esmember.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">Spanish</a></div> 
+
      
         <div class="memberSide">
-          <p class="memberHeader"> Members<div class="rbLine"></div></p>
+          <p class="memberHeader"> Advisors<div class="rbLine"></div></p>
           <ul class="MembersList" id="membList">
   
           </ul>
-
+          <p class="memberHeader"> Officers<div class="rbLine"></div></p>
+          <ul class="MembersList" id="officerList">
+  
+          </ul>
         </div>
         <div class="associatesSide">
         </div>
@@ -80,7 +85,7 @@
       //v
        var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
        "/memberPage/members/chris.jpg","/memberPage/members/adb.jpg","/memberPage/members/este.jpg","/memberPage/members/jar.jpg","/memberPage/members/say.jpg", "/memberPage/members/nac.jpg","/memberPage/members/daf.jpg","/memberPage/members/jose.jpg","/memberPage/members/dana.jpg","/memberPage/members/andy.jpg"]
-        var leader = ["Jason McCuish","12th Grade", "English Department Head", "Advisor"]
+        var leader = ["Jason McCuish","12-9th grade", "English Department Head", "Advisor"]
         var leader2 = ["Ms. Price","12th-11th Grade", "English", "Advisor"]
         var leader3 = ["Ms. B","12th-11th Grade", "Childcare Shop", "Advisor"]
         var leader4 = ["Mr. Rateu","12th-11th Grade", "TV media shop", "Advisor"]
@@ -88,7 +93,7 @@
         var vicePres = ["Luis","12th Grade", "Electrical", "Vice President"]
         var secretary = ["Giselle","12th Grade", "Health Tech", "Secretary"]
         var treasurer = ["Dana","10th Grade", "Health Tech", "Treasurer"]
-        var member1 = ["Saydy","12th Grade", "Health Tech", ""]
+       /* var member1 = ["Saydy","12th Grade", "Health Tech", ""]
         var member2 = ["Megan","12th Grade", "Childcare Shop", ""]
         var member3 = ["Ryan","12th Grade", "IT", ""]
         var member4 = ["Jared","12th Grade", "IT", ""]
@@ -104,9 +109,10 @@
         var member14 = ["Hailley","10th Grade", "TV media", ""]
         var member15 = ["Alexander","10th Grade", "Health Tech", ""]
         var member16 = ["Andy", "9th Grade", "N/A"]
-        var member17 = ["Bryan", "8th Grade", "N/A"]
-        var members =[leader, leader2, leader3,leader4, president, vicePres, secretary, treasurer, member1, member2, member3, member4,
-         member5, member6, member7, member8,member9,member10, member11, member12, member13, member14, member15, member16, member17]
+        var member17 = ["Bryan", "8th Grade", "N/A"]*/
+        var members =[leader, leader2, leader3,leader4, president, vicePres, secretary, treasurer
+        /* member1, member2, member3, member4,
+    member5, member6, member7, member8,member9,member10, member11, member12, member13, member14, member15, member16, member17 */]
 
         var membersAmount = members.length;
 
@@ -125,7 +131,7 @@
         //this variable is used to keep the symetry of the page by making the last member have a large padding and creating a new row where members with no picture will begin
         membersWithPictures=8
 
-
+        var loc = "membList"
 
         for (let i = 0; i < membersAmount; i++){
             //
@@ -133,12 +139,16 @@
             var currentMember = members[i]
             console.log(currentMember, i)
             // MEMBERS!!!! //
+            if (i==4){
+              loc = "officerList"
+            }
+            
         
         var list = document.createElement('li');
         list.id = 'list'+i;
         list.className = 'bubbleThingHolder';
         document.body.appendChild(list);
-        document.getElementById("membList").appendChild(list);
+        document.getElementById(loc).appendChild(list);
           //
         
         var div = document.createElement('div');
