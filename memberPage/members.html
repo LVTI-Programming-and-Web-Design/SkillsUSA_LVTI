@@ -83,12 +83,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
     <script>
       //v
-       var memberImgs = ["/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg","/memberPage/members/rate.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
+       var memberImgs = ["/memberPage/members/jason_mccuish.jpg","/memberPage/members/ms_price.jpg","/memberPage/members/rate.jpg","/memberPage/members/mr_rateau.jpg", "/memberPage/members/mr_marcus.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
        "/memberPage/members/chris.jpg","/memberPage/members/adb.jpg","/memberPage/members/este.jpg","/memberPage/members/jar.jpg","/memberPage/members/say.jpg", "/memberPage/members/nac.jpg","/memberPage/members/daf.jpg","/memberPage/members/jose.jpg","/memberPage/members/dana.jpg","/memberPage/members/andy.jpg"]
         var leader = ["Jason McCuish","12-9th grade", "English Department Head", "Advisor"]
         var leader2 = ["Ms. Price","12th-11th Grade", "English", "Advisor"]
         var leader3 = ["Ms. B","12th-11th Grade", "Childcare Shop", "Advisor"]
         var leader4 = ["Mr. Rateu","12th-11th Grade", "TV media shop", "Advisor"]
+        var leader5 = ["Mr. Marcus","12th-11th Grade", "HVAC", "Advisor"]
+
         var president = ["Anthony","12th Grade", "TV Media", "President"]
         var vicePres = ["Luis","12th Grade", "Electrical", "Vice President"]
         var secretary = ["Giselle","12th Grade", "Health Tech", "Secretary"]
@@ -110,7 +112,7 @@
         var member15 = ["Alexander","10th Grade", "Health Tech", ""]
         var member16 = ["Andy", "9th Grade", "N/A"]
         var member17 = ["Bryan", "8th Grade", "N/A"]*/
-        var members =[leader, leader2, leader3,leader4, president, vicePres, secretary, treasurer
+        var members =[leader, leader2, leader3,leader4, leader5, president, vicePres, secretary, treasurer
         /* member1, member2, member3, member4,
     member5, member6, member7, member8,member9,member10, member11, member12, member13, member14, member15, member16, member17 */]
 
@@ -129,7 +131,7 @@
 
 
         //this variable is used to keep the symetry of the page by making the last member have a large padding and creating a new row where members with no picture will begin
-        membersWithPictures=8
+        membersWithPictures=9
 
         var loc = "membList"
 
@@ -138,8 +140,8 @@
     
             var currentMember = members[i]
             console.log(currentMember, i)
-            // MEMBERS!!!! //
-            if (i==4){
+            // MEMBERS!!!! // i = ADVISORS ONLY.length
+            if (i==5){
               loc = "officerList"
             }
             
