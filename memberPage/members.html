@@ -7,7 +7,8 @@
     <meta name="theme-color" content="#1f1f1f">
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
     <link rel="stylesheet" href="members.css">
-    <title>Document</title>
+    <link rel = "icon" type= "image/x-icon" href="../favicon.ico">
+    <title>SkillsUSALVTI</title>
 </head>
 <body>
     <div class="App">
@@ -81,6 +82,9 @@
       <script src = "../loadFooter.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+<script type="module">
+  import { Octokit } from "https://esm.sh/@octokit/rest";
+</script>
     <script>
       //v
        var memberImgs = ["/memberPage/members/jason_mccuish.jpg","/memberPage/members/ms_price.jpg","/memberPage/members/rate.jpg","/memberPage/members/mr_rateau.jpg", "/memberPage/members/mr_taylor.jpg", "/memberPage/members/ant.jpg","/memberPage/members/nac.jpg","/memberPage/members/gis.jpg","/memberPage/members/dana.jpg","/memberPage/members/baka.jpg",
@@ -139,7 +143,7 @@
             //
     
             var currentMember = members[i]
-            console.log(currentMember, i)
+            //console.log(currentMember, i)
             // MEMBERS!!!! // i = ADVISORS ONLY.length
             if (i==5){
               loc = "officerList"
@@ -147,15 +151,15 @@
             
         
         var list = document.createElement('li');
-        list.id = 'list'+i;
-        list.className = 'bubbleThingHolder';
+        list.id = 'list'+i; 
+        list.className = 'bubbleThingHolder'; //<li class = 'bubbleThingHolder' ....
         document.body.appendChild(list);
         document.getElementById(loc).appendChild(list);
           //
         
         var div = document.createElement('div');
         div.id = 'div'+i;
-        div.className = 'bubbleThing';
+        div.className = 'bubbleThing'; // <div class='bubbleThing' .....
         document.body.appendChild(div);
         document.getElementById("list"+i).appendChild(div);
         var img = document.createElement("img");
@@ -440,6 +444,28 @@ read()
         var menu = document.querySelector('.burger-menu-list');
         menu.classList.toggle('show');
         }
+
+/*
+        //loop through json files: 
+
+  //access advisors images
+    fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/members/jason_mccuish.jpg")
+    .then(r=>r.json())
+    .then(j =>{
+      console.log("DATA:", j.download_url);
+      document.getElementById("membList").innerHTML += `
+      <li class="bubbleThingHolder"><div class="bubbleThing"><img class="profileImg" src="${j.download_url}"/></div></li>
+      `;
+
+    })
+
+
+    //access officers images:
+    fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/officersImgs")
+    .then(r=>r.json())
+    .then(j => console.log(j))
+
+ /**/
 
     </script>
 </body>

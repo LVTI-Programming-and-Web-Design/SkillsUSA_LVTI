@@ -7,7 +7,8 @@
     <meta name="theme-color" content="#1f1f1f">
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
     <link rel="stylesheet" href="aboutUs.css">
-    <title>Document</title>
+    <link rel = "icon" type= "image/x-icon" href="../favicon.ico">
+    <title>SkillsUSALVTI</title>
 </head>
 <body>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,25 +27,24 @@
     <link rel = "stylesheet" href = "../index//styles.css"/>
 
     <div id = "header"></div>
-    <div style="position: absolute; z-index: 2; top: 120px;"><a href="/aboutUs/EsAboutUs.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">Spanish</a></div> 
+    <div style="position: absolute; z-index: 2; top: 120px;"><a href="https://andersonblanco.github.io/LynnTech_SkillsUSA_Website/aboutUs/EsAboutUs.html" style="background-color: rgb(255, 255, 255); padding: 10px; border-radius: 5px; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); color: black; text-decoration: none;">Spanish</a></div> 
 
       </div>
       </div>
     </div>
     <div class="headerImageHolder">
-      <img src="aboutUsHeader.jpg" class="headerImage"/>
+      <img src="./aboutUSHead.jpg" class="headerImage"/>
       <div class="headerTextHolder">
           <p class="headerText">ABOUT US</p>
       </div>
     </div>
+
       <div class="secondSection">
       <div class="contentHolder">
       <div class="textBarr">
       <div class="infoText">
           
-          <p style="font-size: 1.5rem; padding-bottom: 100px;">      Working in tandem with the mission of SkillsUSA, Lynn Tech’s chapter brings the mission and the Program of Work (PoW) to life by focusing on centering school and community awareness on the importance of career and technical education. Our chapter aims to serve the community by highlighting SkillsUSA, CTE programs, and engendering high-level service projects to support the City of Lynn and beyond. Over the last ten years, our chapter has focused on linking all three of the major components of SkillsUSA (championships, leadership, and service) by working directly with the community in areas that need service. As a result, our chapter has received local, state, and national recognition for our efforts. Through our service projects, we not only apply the tenets of SkillsUSA, but we also aim to achieve the Core Values of the LPS.
-
-
+          <p  id= "description" style="font-size: 1.5rem; padding-bottom: 100px;">     
           </p>
           
 
@@ -84,7 +84,9 @@
         var menu = document.querySelector('.burger-menu-list');
         menu.classList.toggle('show');
         };
-
+  
+        //insert english description/text of page into <p id = "description"></p>
+        fetch("./eng_description.txt").then(r=>r.text()).then(r=>document.getElementById("description").innerHTML=r)
         
   
      

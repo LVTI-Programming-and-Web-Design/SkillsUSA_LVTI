@@ -39,16 +39,23 @@ body {
   cursor: pointer;
 }
 
-.dropdown {
+.dropDown {
   display: inline-block;
   position: relative;
   z-index: 2;
+  text-align:left;
+  list-style-type: none;
+  font-size: 1.25rem; 
+}
+
+.dropDown li{
+  margin-block: 5rem;
 }
 .dropdown-content {
   display: none;
   position: absolute;
   left: -24px;
-  overflow: auto;
+  overflow: scroll;
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
 }
 .dropdown:hover .dropdown-content {
@@ -393,6 +400,7 @@ footer{
    text-align: left;
    align-items: center;
    justify-content: center; 
+
 }
 
 .chapterAwards h1, .membersAwards h1, .teachersAwards h1{
@@ -539,7 +547,16 @@ legend{
     }
     .AWARDS{
       padding-right: 5px;
+      height: fit-content;
     }
     
   }
   
+
+  #CA_title{
+   font-size: 1.5rem;
+    text-align:left;
+    display: flex;
+    flex-direction: row; 
+    
+  }

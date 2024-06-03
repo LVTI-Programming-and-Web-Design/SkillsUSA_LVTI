@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        git hub api access token: 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
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin478y32tryew7rugfwyuegcwyuegewurghuix</title>
+    <style>
+        html, body{
+            text-align:center;
+            align-items:center; 
+            justify-content: center;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .cat_title{
+            font-size: 1.25rem;
+             font-weight: bold;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>Admin</h1>
+<hr/>
+    <h1 class="cat_title">Comittes Images</h1>
+    <p>Name the files the same name as the comitte, ending with .jpg for each file</p>
+    <ul>
+        <li>Championship -> championship.jpg</li>
+        <li>Community -> community.jpg</li>
+        <li>Fundraising -> fundraising.jpg</li>
+        <li>Leadership -> leadership.jpg</li>
+        <li>Recruitment -> recruitment.jpg</li>
+        <li>Social -> social.jpg</li>
+        </ul>
+        
+
+    <legend>Drop folder/files</legend>
+    <input id = "comittes_imgs_filedrop" type = "file" />
+
+
+    <hr>
+
+    <h1 class="cat_title">Slider Images</h1>
+    <p>Name images in order 1-5 (max slider images is 5) and with .jpg extension</p>
+    <p>Uploaded images will only replace the current imgs with identical filename</p>
+    <p>Structure of slider images: </p>
+    <ul>
+        <li>img1.jpg</li>
+        <li>img2.jpg</li>
+        <li>img3.jpg</li>
+        <li>img4.jpg</li>
+        <li>img5.jpg</li>
+
+    </ul>
+
+    <legend>Drop folder/files</legend>
+    <input id = "slider_imgs_filedrop" type = "file" />
+
+
+    <hr>
+    <h1 class="cat_title">About US page </h1>
+    <p>For text files: files must end with .txt extension and have proper naming: </p>
+    <ul>
+        <li>  <p>English version -> eng_description.txt</p></li>
+        <li>  <p>Spanish version -> spn_description.txt</p></li>
+
+    </ul>
+
+    <legend>Drop txt folder/files</legend>
+    <input id="aboutUS_text_filedrop" type = "file" />
+<br/>
+<br/>
+<br/>
+    <legend>For images: mus have .jpg extension</legend>
+    <input id="about_us_image_filedrop" type = "file" />
+
+
+<hr>
+
+<h1 class="cat_title">Update Advisors</h1>
+<p>Each advisor field will require an image file to drop in along with 4 text input fields for 4 advisor details </p>
+
+<form>
+    <legend>Advisor 1</legend>
+    <legend>Image:</legend>
+<input id="aboutUS_text_filedrop" type = "file" />
+
+<fieldset>
+<legend>Add Advisor</legend>
+<input type = "text" placeholder = "name"/>
+<input type = "text" placeholder = "grade level"/>
+<input type = "text" placeholder = "position"/>
+<input type = "text" placeholder = "name"/>
+</form>
+</fieldset>
+<hr>
+
+ 
+
+</body>
+<script>
+    fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/members")
+    .then(res => res.json())
+    .then(_json => console.log(_json))
+</script>
+</html>
