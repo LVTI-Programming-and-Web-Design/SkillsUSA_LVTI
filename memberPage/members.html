@@ -139,6 +139,8 @@
 
         var loc = "membList"
 
+/*
+        
         for (let i = 0; i < membersAmount; i++){
             //
     
@@ -222,6 +224,11 @@
           document.getElementById("membList").appendChild(br);
         }
         }
+
+        /**/
+
+
+
 
           /*
         var AssoHeader = document.createElement("p");
@@ -440,15 +447,89 @@ function read(){
 
 read()
     */
+
+
+
     function toggleMenu() {
         var menu = document.querySelector('.burger-menu-list');
         menu.classList.toggle('show');
+        
         }
- 
+       
+//load Advsiors profiles - START
+        const advisorsJsonFileNames=["mccuish.json", "msb.json", "price.json", "rateu.json", "taylor.json"]
+         
+          const advisors_ul = document.getElementById("membList");
+          for(let a of advisorsJsonFileNames){         
+          let xml = new XMLHttpRequest(); 
+          xml.onload = () =>{
+            if(xml.readyState=4 && xml.status=="200"){ //"200" = okey status (suscesful/healthy)
+            let obj = JSON.parse(xml.responseText);
+             console.log(obj)
+           advisors_ul.innerHTML += `
+           <li class="bubbleThingHolder">
+              <div class="bubbleThing">
+                <img class="profileImg" src="./advisorsImgs/${obj.img}"/>
+                <p class="memberName">${obj.name}</p>
+                <p class="memberGrade">${obj.vocation}</p>
+                <p class="memberGrade">${obj.grade_level}</p>
+                <p class="memberPosition">${obj.position}</p>
+                </div>
+                </li>
+           `;
+            }
+          }
+
+          xml.open("GET", `./advisorsObjs/${a}`, true);
+          xml.send()
+          
+     
+         
+        }
+
+
+  //load Advsiors profiles - END
+
+
+//load Officers profiles - START
+const officersJsonNames=["ant.json", "luis.json", "gis.json", "dana.json"]
+         
+  const officials_ul = document.getElementById("officerList");
+         for(let b of officersJsonNames){         
+         let xml = new XMLHttpRequest(); 
+         xml.onload = () =>{
+           if(xml.readyState=4 && xml.status=="200"){ //"200" = okey status (suscesful/healthy)
+           let obj = JSON.parse(xml.responseText);
+            console.log(obj)
+      officials_ul.innerHTML += `
+          <li class="bubbleThingHolder">
+             <div class="bubbleThing">
+               <img class="profileImg" src="./officersImgs/${obj.img}"/>
+               <p class="memberName">${obj.name}</p>
+               <p class="memberGrade">${obj.vocation}</p>
+               <p class="memberGrade">${obj.grade_level}</p>
+               <p class="memberPosition">${obj.position}</p>
+               </div>
+               </li>
+          `;
+           }
+         }
+
+         xml.open("GET", `./officersObjs/${b}`, true);
+         xml.send()
+         
+    
+        
+       }
+
+
+       
+/*
         fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/advisorsObjs")
         .then(r => r.json())
         .then(j=>{
-          //console.log(j);
+          console.log(j);
+          /*
           for(let advisor of j){ // directly fetching the json download links 
             let json_link = (advisor.download_url);
             fetch(json_link)
@@ -459,7 +540,7 @@ read()
               document.getElementById("membList").innerHTML += `
             <li class="bubbleThingHolder">
               <div class="bubbleThing">
-                <img class="profileImg" src="${j.download_url}"/>
+                <img class="profileImg" src="${obj.img.download_url}"/>
                 <p class="memberName">${obj.name}</p>
                 <p class="memberGrade">${obj.grade_level}</p>
                 </div>
@@ -467,10 +548,11 @@ read()
               `;
             })
           }
+    
         })
-/*
+       /**/
         //loop through json files: 
-
+/*
   //access advisors images
     fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/members/jason_mccuish.jpg")
     .then(r=>r.json())
