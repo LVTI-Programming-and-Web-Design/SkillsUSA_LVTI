@@ -457,15 +457,19 @@ read()
         }
        
 //load Advsiors profiles - START
-        const advisorsJsonFileNames=["mccuish.json", "msb.json", "price.json", "rateu.json", "taylor.json"]
-         
+fetch("../variables.json")
+.then(async r=>r.json())
+.then(_json=>{
+
+        const advisorsJsonFileNames=_json.advisors;
+ 
           const advisors_ul = document.getElementById("membList");
           for(let a of advisorsJsonFileNames){         
           let xml = new XMLHttpRequest(); 
           xml.onload = () =>{
             if(xml.readyState=4 && xml.status=="200"){ //"200" = okey status (suscesful/healthy)
             let obj = JSON.parse(xml.responseText);
-             console.log(obj)
+            // console.log(obj)
            advisors_ul.innerHTML += `
            <li class="bubbleThingHolder">
               <div class="bubbleThing">
@@ -480,20 +484,24 @@ read()
             }
           }
 
+
+
           xml.open("GET", `./advisorsObjs/${a}`, true);
           xml.send()
           
-     
-         
         }
 
-
+      });
   //load Advsiors profiles - END
 
 
 //load Officers profiles - START
-const officersJsonNames=["ant.json", "luis.json", "gis.json", "dana.json"]
-         
+
+
+fetch("../variables.json")
+.then(async r=>r.json())
+.then(_json=>{
+const officersJsonNames= _json.officers;
   const officials_ul = document.getElementById("officerList");
          for(let b of officersJsonNames){         
          let xml = new XMLHttpRequest(); 
@@ -521,6 +529,11 @@ const officersJsonNames=["ant.json", "luis.json", "gis.json", "dana.json"]
     
         
        }
+
+
+});
+  
+     
 
 
        

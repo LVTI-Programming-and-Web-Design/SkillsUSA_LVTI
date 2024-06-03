@@ -12,11 +12,15 @@
             text-align:center;
             align-items:center; 
             justify-content: center;
+            padding-block: 1.5rem;
         }
         ul{
-            list-style-type: none;
+        
             display: flex;
             flex-direction: column; 
+            list-style-position: inside; 
+            text-align:center;
+            
         }
 
         .cat_title{
@@ -68,8 +72,8 @@
     <h1 class="cat_title">About US page </h1>
     <p>For text files: files must end with .txt extension and have proper naming: </p>
     <ul>
-        <li>  <p>English version -> eng_description.txt</p></li>
-        <li>  <p>Spanish version -> spn_description.txt</p></li>
+        <li>English version -> eng_description.txt</li>
+        <li>Spanish version -> spn_description.txt</li>
 
     </ul>
 
@@ -84,30 +88,42 @@
 
 <hr>
 
-<h1 class="cat_title">Update Advisors</h1>
-<p>Each advisor field will require an image file to drop in along with 4 text input fields for 4 advisor details </p>
+<h1 class="cat_title">Advisors</h1>
+ 
+<div class = "block">
+    <h3>General rules:</h3>
+    <ul>
+        <li>all images names end in .jpg </li>
+        <li>no special characters, including "/" and "."</li>
+        <li>"_" - underscores are allowed</li>
+    </ul>
+</div>
 
-<form>
-    <legend>Advisor 1</legend>
-    <legend>Image:</legend>
-<input id="aboutUS_text_filedrop" type = "file" />
-
-<fieldset>
-<legend>Add Advisor</legend>
-<input type = "text" placeholder = "name"/>
-<input type = "text" placeholder = "grade level"/>
-<input type = "text" placeholder = "position"/>
-<input type = "text" placeholder = "name"/>
-</form>
-</fieldset>
-<hr>
 
  
 
+<hr>
+
+ 
 </body>
 <script>
-    fetch("https://api.github.com/repos/NabetseC/LynnTech_SkillsUSA_webpage_v7-a258f05dbe7286464dc8e6f3534afcb0e7c62fe1/contents/memberPage/members")
-    .then(res => res.json())
-    .then(_json => console.log(_json))
+ 
+
+ //fethcing advisor profiles: 
+ const xhttp = new XMLHttpRequest();
+ const advisorsJsonFileNames= process.env.advisors;
+ console.log(advisorsJsonFileNames)
+ xml.onload = () =>{
+            if(xml.readyState=4 && xml.status=="200"){ //"200" = okey status (suscesful/healthy)
+            let obj = JSON.parse(xml.responseText);
+             console.log(obj)
+          
+            }
+          }
+
+
+
+          xml.open("GET", `../advisorsObjs/${a}`, true);
+          xml.send()
 </script>
 </html>
