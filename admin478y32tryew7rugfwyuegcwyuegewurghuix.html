@@ -53,6 +53,15 @@ button{
     outline: none;
     padding: .5rem 1rem;
 }
+
+input{
+    margin-block: 1rem;
+}
+
+.adisorEditSace{
+    margin-top: 5rem;
+    margin-bottom: .5rem;
+}
         </style>
 </head>
 <body>
@@ -128,11 +137,10 @@ button{
 
 </div>
 
- 
+<h3 class ="adisorEditSace">Edit Space (selected profiles will appear to edit below):</h3>
+<div id ="popup"></div>
 
 <hr>
-
- 
 </body>
 <script>
  
@@ -142,14 +150,15 @@ button{
 .then(async r=>r.json())
 .then(_json=>{
  const advisorsJsonFileNames= _json.advisors;
- console.log(advisorsJsonFileNames)
+ //console.log(advisorsJsonFileNames)
  for(let a of advisorsJsonFileNames){  
 
   const xhttp = new XMLHttpRequest();
  xhttp.onload = () =>{
             if(xhttp.readyState=4 && xhttp.status=="200"){ //"200" = okey status (suscesful/healthy)
             let obj = JSON.parse(xhttp.responseText);
-             console.log(obj)
+             //console.log(obj)
+ 
              document.getElementById("advisors").innerHTML += `
                <div class="profileFrame">
                    <img class="profileImg" src = "../memberPage/advisorsImgs/${obj.img}"/>
@@ -157,8 +166,8 @@ button{
                <p class="memberGrade">${obj.vocation}</p>
                <p class="memberGrade">${obj.grade_level}</p>
                <p class="memberPosition">${obj.position}</p>
-               <button class = "button" id = "edit">Edit</button>
-               <button class = "button" id = "edit">Delete</button>
+               <button class = "button" id = "edit" onclick = 'modal(${JSON.stringify(obj)})'>Edit</button>
+               <button class = "button" id = "edit" onclick="console.log('Hello Universe')">Delete</button>
                 </div>
              `;
 
@@ -172,5 +181,111 @@ button{
         }
 
         }); 
+
+
+function editOBJ(obj, changes){
+    let currentOBJ = obj;
+    for(let key in currentOBJ){
+        if(changes.key != null || changes.key != ""){
+            currentOBJ.key = changes.key;
+        }
+    }
+
+    return currentOBJ; 
+}
+
+function modal(obj){
+
+    let currentOBJ = obj; 
+    console.log(currentOBJ); 
+
+    document.getElementById("popup").innerHTML= `
+    <div class="profileFrame"> 
+                   <img id = "profileImg" class="profileImg" src = "../memberPage/advisorsImgs/${obj.img}"/>
+
+                   <div class = "imgUploadCont">
+                    <input class = "imgUpload" id = "imgUpload" type = "file" accept=".jpeg, .jpg"/>    
+                    <p>please upload an image file if you'd like to change it</p>
+                    </div>
+
+                   <input id="newName" type="text" class="memberName" placeholder='${obj.name}'/>
+                   <input id="newVocation" type="text" class="memberVocation" placeholder='${obj.vocation}'/>
+
+                   <input id="newGradeLevel" type="text" class="memberGrade" placeholder='${obj.grade_level}'/>
+
+                   <input id="newPosition" type="text" class="memberName" placeholder='${obj.position}'/>
+                 <button class="submitChanges" id = "submitChanges">Submit</button>
+                </div>
+        `;
+
+    
+      function deleteProfile(path){
+        
+        
+      }
+
+      deleteProfile("/workspaces/LynnTech_SkillsUSA_Website/memberPage/advisorsObjs/testOBJ.json")
+ 
+        var changes = {};
+    async function setChanges(obj){
+
+            //console.log(obj);
+            changes = obj;
+           //console.log(obj.img)
+            if(changes.img == null || changes.img == ""){
+                delete changes.img
+            }else{
+                let reader = new FileReader();
+                reader.onload = (e) =>{
+                let resURL = (e.target.result);
+                changes.img = resURL;
+                //console.log("Added url:", changes)
+                };
+
+            reader.readAsDataURL(changes.img)
+            }
+
+            //maniupulate json files: test
+
+             
+            console.log(changes);
+            
+        }
+
+        /*
+        const reader = new FileReader();
+        reader.onload  = () =>{
+            localStorage.setItem("newImg", () => redaer.result, false); 
+        }
+        /**/
+
+        document.getElementById("imgUpload").onchange = () =>{
+            let reader = new FileReader();
+            
+                reader.onload = (e) =>{
+                let resURL = (e.target.result);
+                document.getElementById("profileImg").src = resURL; 
+                };
+
+            reader.readAsDataURL(document.getElementById("imgUpload").files[0])
+        }
+
+    document.getElementById("submitChanges").onclick = () =>{
+     
+        setChanges({
+        "name": document.getElementById("newName").value,
+        "vocation": document.getElementById("newVocation").value,
+        "grade_level": document.getElementById("newGradeLevel").value,
+        "position": document.getElementById("newPosition").value,
+        "img": document.getElementById("imgUpload").files[0]
+    })
+
+    }; 
+
+
+   
+};
+
+
 </script>
 </html>
