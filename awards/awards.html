@@ -242,9 +242,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src = "../loadContent.js"></script>
     <script src = "../loadFooter.js"></script>
-    <script>
-      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.3.2/js/sql-debug.js" integrity="sha512-VqV7lj9Q89PQ837BKOlZVtqs/g3zw+2HKXgCFtfK7QmtiaWqdoP00KcfECZtaIAv+4DZCL0Tlg0BGejVbKxdQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aws-sdk/client-s3@3.598.0/dist-cjs/index.min.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
 
+   <script>
+      
+/*
         const awards_lists = document.getElementById("awardsList");
         var CA_toggle = false;
         var years_tags = []
@@ -280,79 +284,52 @@
 /**/
 //process chapter awards csv file:  
 
-const awardsContainer = document.getElementById("CA_list"); 
-var data = {}; 
-var _d = []; 
-function processData(){
-var _test_ul = document.getElementById("dropDown"); 
-const processData = fetch("./chapter_awards.csv")
-              .then(res => res.text())
+ const ul = document.getElementById("dropDown"); 
+ const c = supabase.createClient('https://uflfqkebjwluelcwjraa.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmbGZxa2ViandsdWVsY3dqcmFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTg1MDUzMDEsImV4cCI6MjAzNDA4MTMwMX0.dhnTuJ9BkQ_IheYBaT_eODdL0VoUwkY0RfSwOO4RzL4');
+ async function getPublicUrl() {
+      const {data:{publicUrl}} = c.storage
+        .from('awards')
+        .getPublicUrl('AWARDS.json');
+        
+       
+      //ftetch url to get raw data and file:
+       fetch(publicUrl)
+       .then(res => res.json())
+       .then(json =>{
 
-              .then(async d =>{
-                let obj = Papa.parse(d, {
-                  download: false,
-                  dynamicTyping: true,
-                  delimiter: ",",
-                  skipEmptyLines: true,
-                });
-                //manipulate data
-            
-               for(let x of obj.data){
-                /*
-                  for(let y of x){
-                    for(let s of y.toString()){
-                      if(s == "�"){
-                       // let idx = y.indexOf(s);
-                       // var arr = y;
-                       // arr.splice(idx, 0); 
-                       // console.log(arr[0]); 
-                      }
-                      
-                    }
+  //manipulate data
+          for(let year in json){
+            ul.innerHTML += 
+            `
+              <li>
+                <p class="year">${year}-</p>
+                  <div>
+            `; 
+            for(let award of json[year]){
+              ul.innerHTML += 
+              `
+                <p class="headerAwards">${award}</p>
+              `; 
+      
+            };
+
+            ul.innerHTML += 
+            `
+                </div>
+            </li>
+            `; 
+          }
+       })
+
+    
+
+
+  
                   }
-                  /**/
-                    data[x[0]] = x.slice(1, x.length -1);
-                    _d.push(x)
-                  
-                    //display data:
 
-                    //append <li> open tag, and year for every year array 
-                   
-                    _test_ul.innerHTML +=  `<li> <p class="year">${x[0]}-</p>`; 
 
-                      //append every award under previously appended tags 
-                    for(let award of x.splice(1, x.length-1)){
-                      if(award != null){
-                        console.log(x[0])
-                        console.log(award)
-                        for(s of award){
-                         if(s == "�"){
-                          award[award.indexOf(s)] = "idk"
-                         }
-                        }
-
-                        _test_ul.innerHTML += `
-                        <p class="headerAwards">${award}</p>
-                          `; 
-                      }
-                      }
+    getPublicUrl();
  
-                      _test_ul.innerHTML+=`</li> `; 
-                    }
-         
-                }
-              )
-                 
- 
-              };
-            
-processData(); 
-console.log(data)
-console.log(_d)
-
-
-
-
     </script>
 </body>
 </html>

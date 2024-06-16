@@ -1,0 +1,106 @@
+
+const awardsContainer = document.getElementById("CA_list"); 
+var data = {}; 
+var _d = []; 
+function processData(){
+var _test_ul = document.getElementById("dropDown"); 
+const processData = fetch("./AWARDS.json")
+              .then(res => res.json())
+
+              .then(async d =>{
+                
+                /*
+                let obj = Papa.parse(d, {
+                  download: false,
+                  dynamicTyping: true,
+                  delimiter: ",",
+                  skipEmptyLines: true,
+                });
+                */
+                //manipulate data
+              const keys = [(Object.keys(d))];
+              console.log(keys)
+              
+
+               
+      
+               for(let x of keys){
+
+                 console.log(x)
+                
+                  for(let y of x){
+                    for(let s of y.toString()){
+                      if(s == "�"){
+                       // let idx = y.indexOf(s);
+                       // var arr = y;
+                       // arr.splice(idx, 0); 
+                       // console.log(arr[0]); 
+                      }
+                      
+                    }
+                  }
+      
+                    //data[x[0]] = x.slice(1, x.length -1);
+                    //_d.push(x)
+                  
+                    //display data:
+
+                    //append <li> open tag, and year for every year array 
+                   
+                    //_test_ul.innerHTML +=  `<li> <p class="year">${x[0]}-</p>`; 
+
+                      //append every award under previously appended tags 
+                    for(let award of x.splice(1, x.length-1)){
+                      if(award != null){
+                        console.log(x[0])
+                        console.log(award)
+                        for(s of award){
+                         if(s == "�"){
+                          award[award.indexOf(s)] = "idk"
+                         }
+                        }
+
+                        _test_ul.innerHTML += `
+                        <p class="headerAwards">${award}</p>
+                          `; 
+                      }
+                      }
+ 
+                      _test_ul.innerHTML+=`</li> `; 
+                    }
+        
+                }
+              )
+                 
+  
+              };
+                      
+processData(); 
+//console.log(data)
+//console.log(_d)
+
+
+/*
+//testing local sql file: 
+try{
+async function initSQL(){
+  const SQL = await initSqlJs({
+  locateFile: f => "./AWARDS.sql",
+});
+const db  = new SQL.Database(); 
+const stmt = db.prepare("SELECT * FROM AWARDS");
+const result = stmt.getAsObject()
+console.log(result)
+}
+
+initSQL();
+  
+console.log("Utilization of sql.js suscesful")
+}catch{
+  console.log("ERROR uilizing sql.js")
+}
+/**/
+
+//data based on json file: 
+ 
+

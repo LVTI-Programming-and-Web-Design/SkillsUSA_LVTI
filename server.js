@@ -11,9 +11,9 @@ const app = express();
     //or
 
 
-app.use(express.static("index"));
+//app.use(express.static("index"));
 app.get("/", (req, res) =>{
-    res.sendFile(__dirname + "/index/index.html"); 
+    res.send("Hellow Universe")
 })
  
 app.listen(3000, () =>{
